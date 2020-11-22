@@ -8,6 +8,7 @@ $con= new mysqli("localhost:3308","root","","virtual_police_station") or die(mys
     $C_fathername =  mysqli_real_escape_string($con,$_POST['C_fathername']);
     $C_address=mysqli_real_escape_string($con,$_POST['C_address']);
     $C_mobileno=  mysqli_real_escape_string($con,$_POST['C_mobileno']);
+    $Aadhar_id= mysqli_real_escape_string($con,$_POST['Aadhar_id']);
     $C_Id_proof =  $_FILES['C_Id_proof'];
 
 
@@ -65,7 +66,7 @@ $con= new mysqli("localhost:3308","root","","virtual_police_station") or die(mys
 
    $insertquery2="INSERT INTO witness_details(W_name,W_district,W_fathername,W_address,W_mobileno,W_Id_proof) VALUES('$W_full_name','$W_district','$W_fathername','$W_address','$W_mobileno','$file_name3')" ;
    
-   $insertquery3="INSERT INTO event_details(FIR_TYPE , Tahsil ,Police_station,E_place,E_date,E_suspect,E_description,E_anyproof,E_remarks,E_time) VALUES('$FIR_TYPE','$tahsil','$police_station','$E_place','$E_date','$E_suspect','$file_name2','$file_name4','$E_remark' ,CURRENT_TIMESTAMP())";
+   $insertquery3="INSERT INTO event_details(FIR_TYPE , Tahsil ,Police_station,E_place,E_date,Aadhar_id,E_suspect,E_description,E_anyproof,E_remarks,E_time) VALUES('$FIR_TYPE','$tahsil','$police_station','$E_place','$E_date','$Aadhar_id','$E_suspect','$file_name2','$file_name4','$E_remark' ,CURRENT_TIMESTAMP())";
 
 
    $queryrun1=mysqli_query($con,$insertquery1) or die (mysqli_error(($con)));

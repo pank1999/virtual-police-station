@@ -50,6 +50,8 @@ else {
   $_SESSION['u_id'] = $pass_com['id'];
   $_SESSION['first_name'] =$rows['first_name'];
   $_SESSION['last_name']=$rows['last_name'];
+  $_SESSION['aadhar']=$rows['Aadhar_id'];
+
 
  //echo $_SESSION['email'];
  // echo $_SESSION['u_id'];

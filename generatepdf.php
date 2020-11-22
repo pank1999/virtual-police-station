@@ -23,7 +23,7 @@ $con= new mysqli("localhost:3308","root","","virtual_police_station") or die(mys
  $id= $_GET['E_id'];
  $query1=" SELECT * FROM `complainat_details`JOIN event_details JOIN witness_details ON event_details.Event_id=complainat_details.comp_id AND event_details.Event_id=witness_details.Witness_id where Event_id='$id'";
 
- $query=mysqli_query($con,$query1);
+   $query=mysqli_query($con,$query1);
  
    $row=mysqli_fetch_array($query);
  
@@ -37,6 +37,15 @@ $con= new mysqli("localhost:3308","root","","virtual_police_station") or die(mys
   $html.='<tr> <td> '.  $row['Event_id']. ' </td> <td> '.  $row['FIR_TYPE']. ' </td> <td> '.  $row['E_time']. ' </td> </tr>';
   $html.= '</table>';
   $html.='<br><br>';
+
+  $html.= ' <table> ';
+  $html.= ' <tr> <th>Tahsil</th> <th>Area of occurence </th> <th>Police Station</th> </tr>';
+  $html.='<tr> <td> '.  $row['Tahsil']. ' </td> <td> '.  $row['E_place']. ' </td> <td> '.  $row['Police_station']. ' </td> </tr>';
+  $html.= '</table>';
+  $html.='<br><br>';
+
+
+
   
   $html.='<center><h3>1.COMPLAINANTS DETAILS</h3><center>';
   $html.= ' <table class="table"> ';
@@ -65,7 +74,8 @@ $con= new mysqli("localhost:3308","root","","virtual_police_station") or die(mys
   $html.= '<tr> <th>Time of occurrence:</th> <td><h4>'. $row['E_time'] .'</h4></td> </tr>';
   $html.='<tr> <th>Any suspect:</th> <td><h4>'. $row['E_suspect'] .'</h4></td> </tr>';
   $html.= '</table>';
-  $html.='<div> <h4> 4. EVENT DESCRIPTION </h4> <img src="E_description/L32.jpg" style="height:500px;width:700px;" ></div>';
+  $imagename=$row['E_description'];
+  $html.='<div> <h4> 4. EVENT DESCRIPTION </h4> <img src="E_description/'.$imagename.'" style="height:500px;width:700px;" ></div>';
   
 
   $mpdf=new \Mpdf\Mpdf();

@@ -25,6 +25,13 @@
               <label ><span class="glyphicon glyphicon-user"></span>Phone Number</label>
               <input type="number" class="form-control" name="phone_number" placeholder="+91"   required >
             </div>
+
+            <label for="">Aadhar card number</label>
+
+            <div class="form-group">
+               <input type="text" name="Aadhar_id" class="form-control" placeholder="Aadhar card number" required="true" pattern=".{12}" >
+     
+            </div>
             
             <div class="form-group">
               <label><span class="glyphicon glyphicon-user"></span> Upload ID Proof</label>

@@ -7,8 +7,9 @@ if(isset($_SESSION['email'])){
 }
 session_start();
 $con= new mysqli("localhost:3308","root","","virtual_police_station") or die(mysqli_error($con));
+$var=$_SESSION['aadhar'];
 
-$query1="SELECT * FROM event_details";
+$query1="SELECT * FROM event_details WHERE Aadhar_id='$var' ORDER BY Event_id DESC";
 $run1=mysqli_query($con,$query1) or die(mysqli_error($query1));
 
 
@@ -97,9 +98,10 @@ $run1=mysqli_query($con,$query1) or die(mysqli_error($query1));
             <div class="col-lg-12">
                  <table class="table table-striped table-hover ">
                      <tr style="background-color:#2f3b4b;"> 
-                         <th>S.NO</th>
-                         <th>TIME STAMP</th>
+                         
+                         
                          <th>FIR ID</th>
+                         <th>TIME STAMP</th>
                          <TH>FIR TOPIC</TH>
                          <th>GET FIR COPY</th>
                          <TH>STATUS</TH>
@@ -119,12 +121,12 @@ $run1=mysqli_query($con,$query1) or die(mysqli_error($query1));
                                       
                               ?> </td>
                               <td><?php echo $rows['E_time']; ?></td>
-                              <td><?php echo $rows['Event_id'] ;?></td>
+                              
                               <td><?php echo $rows['FIR_TYPE'] ;?></td>
 
                               <td>
                                 <a href="generatepdf.php?E_id=<?php  echo $rows['Event_id']; ?> "> <button class="btn btn-success">download</button></a>  </td>
-                              <td>---</td>
+                              <td style="color:green;"><?php echo $rows['FIR_STATUS'] ;?></td>
 
                            </tr>
 

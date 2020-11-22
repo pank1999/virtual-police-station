@@ -1,6 +1,8 @@
 <?php
+session_start();
  include('signupmodel.php');
  include('loginmodel.php');
+ 
 
 ?>
 <!DOCTYPE html>
@@ -71,7 +73,7 @@ https://templatemo.com/tm-548-training-studio
                               ?>
                               
                             
-                            <li class="main-button"><a href="index.php" data-toggle="modal" data-target="">logout</a></li>
+                              <li class="main-button"><a href="userdashboard.php" style="padding-top:1px;" data-target="">Dashboard</a></li>
                             <?php
                               }
                               else{
@@ -88,7 +90,7 @@ https://templatemo.com/tm-548-training-studio
                               ?>
                               
                             
-                            <li class="main-button"><a href="index.php" data-toggle="modal" data-target="">logout</a></li>
+                                <li class="main-button"><a href="index.php" data-toggle="modal" data-target="">logout</a></li>
                             <?php
                               }
                               else{

@@ -7,6 +7,7 @@ $con= new mysqli("localhost:3308","root","","virtual_police_station") or die(mys
      $Last_name=$_POST['last_name'];
      $Phone_number=$_POST['phone_number'];
      $id_proof=$_FILES['Id_proof'];
+     $adhar_id=$_POST['Aadhar_id'];
      $Email=$_POST['email'];
      $password=$_POST['password'];
      // $password=md5($password);
@@ -57,7 +58,7 @@ else if(!preg_match($regex_contact,$phone_number)){
 
  
              // else {
-                 $user_reg ="INSERT INTO `user_info` (first_name,last_name,phone_number,ID_proof,email,password) VALUES('$First_name','$Last_name','$Phone_number','$file_name','$Email','$password')";
+                 $user_reg ="INSERT INTO `user_info` (first_name,last_name,phone_number,ID_proof,Aadhar_id,email,password) VALUES('$First_name','$Last_name','$Phone_number','$file_name',$adhar_id,'$Email','$password')";
 
                  $user_sub = mysqli_query($con,$user_reg)
                  or die(mysqli_error($con));
@@ -69,6 +70,7 @@ else if(!preg_match($regex_contact,$phone_number)){
                 $_SESSION['email'] = $Email;
                 $_SESSION['first_name'] = $First_name;
                 $_SESSION['last_name'] = $Last_name;
+                $_SESSION['aadhar']=$adhar_id;
 
                 $_SESSION['u_id'] = mysqli_insert_id($con);
                 echo "<script>alert('Resgistered successfully ')</script>";

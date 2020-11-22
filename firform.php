@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 if(!isset($_SESSION['email'])){
 
    echo "<script> alert('login first ') </script>";
@@ -22,6 +22,7 @@ if(!isset($_SESSION['email'])){
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
     <title>FIR FORM</title>
 
+   
     <!-- Additional CSS Files -->
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
 
@@ -108,6 +109,12 @@ if(!isset($_SESSION['email'])){
                                 <input type="text" name="C_mobileno" class="form-control" placeholder="+91 xxxxxxxxxx" required="true">
                                  
                             </div>
+                            <label for="">Aadhar card number</label>
+
+                            <div class="form-group">
+                                <input type="text" name="Aadhar_id" class="form-control" placeholder="Aadhar card number" required="true" pattern=".{12}" >
+                                 
+                           </div>
                             <label for="">Valid ID Proof copy with self attested</label>
 
                             <div class="form-group">
@@ -157,15 +164,32 @@ if(!isset($_SESSION['email'])){
                                 <input type="text" name="FIR_TYPE" class="form-control" placeholder="" required="true">
                                  
                             </div>
-                            <!-- <label for="cars">select place of crime</label>
+                             <label for="cars">select place of crime</label>
                                 <div  class="form-group">
-                                  <select name="cars" id="cars" style="height:40px; width:500px;">
-                                         <option value="volvo">Volvo</option>
-                                         <option value="saab">Saab</option>
-                                          <option value="mercedes">Mercedes</option>
-                                         <option value="audi">Audi</option>
-                                  </select>
-                                </div>  -->
+                                  <select name="cars" id="cars" onclick="F1();" style="height:40px; width:500px;">
+                                         <option value=""  id="0">select Area</option>
+                                         <option value="Maihar Police station"  id="1">Maihar</option>
+                                         <option value="satna Police station" id="2">satna</option>
+                                          <option value="Raigaon Police station" id="3">Raigaon</option>
+                                         <option value="Amarpatan Police station" id="4">Amarpatan</option>
+                                         <option value="Nagod Police station" id="5">Nagod</option>
+                                         <option value="sitpura Police station" id="6">sitpura</option>
+                                         <option value="Dhankher Police station" id="7">Dhankher</option>
+                                         <option value="Jaitwara Police station" id="8">Jaitwara</option>
+                                  </select> <label id="police_station" style="color:green;"></label>
+
+                                  <script>
+
+                                      function F1(){
+                                          var x = document.getElementById('cars').value;
+                                          document.getElementById('police_station').innerHTML=x;
+ 
+                                        }
+
+
+</script>
+
+                                </div>  
                                 <label for="cars">select Tahsil</label>
                                 <div  class="form-group">
                                   <select name="Tahsil" id="cars" style="height:40px; width:500px;">
