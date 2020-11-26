@@ -1,7 +1,7 @@
 <?php
 
 $con= new mysqli("localhost:3308","root","","virtual_police_station") or die(mysqli_error($con));
-session_start();
+
 
 
 
@@ -48,9 +48,9 @@ else {
   session_start();
    $_SESSION['email'] = $email;
   $_SESSION['u_id'] = $pass_com['id'];
-  $_SESSION['first_name'] =$rows['first_name'];
-  $_SESSION['last_name']=$rows['last_name'];
-  $_SESSION['aadhar']=$rows['Aadhar_id'];
+  $_SESSION['first_name'] =$pass_com['first_name'];
+  $_SESSION['last_name']=$pass_com['last_name'];
+  $_SESSION['aadhar']=$pass_com['Aadhar_id'];
 
 
  //echo $_SESSION['email'];

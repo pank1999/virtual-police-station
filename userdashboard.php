@@ -1,11 +1,11 @@
 <?php
-
-if(isset($_SESSION['email'])){
+session_start();
+if(!isset($_SESSION['email'])){
 
    echo "<script> alert('login first ') </script>";
    echo"<script> location.href='index.php' </script>";    
 }
-session_start();
+
 $con= new mysqli("localhost:3308","root","","virtual_police_station") or die(mysqli_error($con));
 $var=$_SESSION['aadhar'];
 
@@ -86,7 +86,10 @@ $run1=mysqli_query($con,$query1) or die(mysqli_error($query1));
               <h3 style="color:rgb(223, 70, 9);">Welcome:<?php  echo $_SESSION['first_name'];echo  $_SESSION['last_name'] ;?></h3>
              </div>
              <div class="col-xs-6">
-             <h3 style="float:right;"><a href="firform.php"><button style="background-color:rgb(223, 70, 9); color:white; height:40px; width:100px;" class="btn">File E-FIR</button></a></h3>
+            <h3 style="float:right;">
+                <a href="firform.php"><button style="background-color: rgb(243, 103, 21); color:white; height:40px; width:100px;" class="btn">File E-FIR</button></a>
+                <a href="firform.php"><button style=" color:white; height:40px; width:100px;" class="btn btn-success">Dial:100</button></a>
+            </h3>
              </div>
           
             

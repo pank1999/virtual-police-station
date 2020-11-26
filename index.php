@@ -90,7 +90,7 @@ https://templatemo.com/tm-548-training-studio
                               ?>
                               
                             
-                                <li class="main-button"><a href="index.php" data-toggle="modal" data-target="">logout</a></li>
+                                <li class="main-button"><a href="logout.php"  data-target="">logout</a></li>
                             <?php
                               }
                               else{
