@@ -1,5 +1,7 @@
 <?php
+
 session_start();
+//include('profile.php');
 if(!isset($_SESSION['email'])){
 
    echo "<script> alert('login first ') </script>";
@@ -59,7 +61,7 @@ $run1=mysqli_query($con,$query1) or die(mysqli_error($query1));
                         <ul class="nav">
                         
                             <li class="scroll-to-section"><a href="index.php" class="" style="color:white; background-color:#2f3b4b;">Home</a></li>
-                            <li class="scroll-to-section"><a href="" style="color:white; background-color:#2f3b4b;">Profile</a></li>
+                            <li class="scroll-to-section"><a href="#" data-toggle="modal" data-target="#profilemodel" style="color:white; background-color:#2f3b4b;">Profile</a></li>
                           <!--  <li class="scroll-to-section"><a href="#our-classes" style="color:white;">Classes</a></li>
                             <li class="scroll-to-section"><a href="#schedule" style="color:white;">Schedules</a></li>
                             <li class="scroll-to-section"><a href="#contact-us" style="color:white;">Contact</a></li> 
@@ -88,7 +90,7 @@ $run1=mysqli_query($con,$query1) or die(mysqli_error($query1));
              <div class="col-xs-6">
             <h3 style="float:right;">
                 <a href="firform.php"><button style="background-color: rgb(243, 103, 21); color:white; height:40px; width:100px;" class="btn">File E-FIR</button></a>
-                <a href="firform.php"><button style=" color:white; height:40px; width:100px;" class="btn btn-success">Dial:100</button></a>
+                <a href="#"><button style=" color:white; height:40px; width:100px;" class="btn btn-success">Dial:100</button></a>
             </h3>
              </div>
           
@@ -129,7 +131,7 @@ $run1=mysqli_query($con,$query1) or die(mysqli_error($query1));
 
                               <td>
                                 <a href="generatepdf.php?E_id=<?php  echo $rows['Event_id']; ?> "> <button class="btn btn-success">download</button></a>  </td>
-                              <td style="color:green;"><?php echo $rows['FIR_STATUS'] ;?></td>
+                              <td style="color:green;"><?php echo $rows['FIR_STATUS'];?></td>
 
                            </tr>
 

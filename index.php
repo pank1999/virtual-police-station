@@ -3,6 +3,7 @@ session_start();
  include('signupmodel.php');
  include('loginmodel.php');
  
+ 
 
 ?>
 <!DOCTYPE html>
@@ -90,15 +91,16 @@ https://templatemo.com/tm-548-training-studio
                               ?>
                               
                             
-                                <li class="main-button"><a href="logout.php"  data-target="">logout</a></li>
+                                <li class="main-button"><a  style="padding-top:0px;" href="logout.php"  data-target="">logout</a></li>
                             <?php
                               }
                               else{
                                   ?>
-                                  <li class="main-button"><a href="#" data-toggle="modal" data-target="#loginmodel">Login</a></li>
+                                  <li class="main-button"><a href="#"  style="padding-top:0px;" data-toggle="modal" data-target="#loginmodel">Login</a></li>
                                 <?php 
                               }
                             ?>
+                            <li ><a class="btn btn-success" target="_blank" href="http://localhost/phpmyadmin/">Admin</a></li>
                             
                          </ul>        
                         <a class='menu-trigger'>
@@ -224,7 +226,7 @@ https://templatemo.com/tm-548-training-studio
                 <div class="col-lg-10 offset-lg-1">
                     <div class="cta-content">
                         <h2>Don’t <em>think</em>, begin <em>today</em>!</h2>
-                        <p>Ut consectetur, metus sit amet aliquet placerat, enim est ultricies ligula, sit amet dapibus odio augue eget libero. Morbi tempus mauris a nisi luctus imperdiet.</p>
+                        <p>My heroes are those who risk their lives every day to protect our world and make it a better place. </p>
                         <div class="main-button scroll-to-section">
                             <a href="#our-classes">Become a member</a>
                         </div>
@@ -265,9 +267,9 @@ https://templatemo.com/tm-548-training-studio
                   <article id='tabs-1'>
                     <img src="assets/images/background.jpg" alt="First Class">
                     <h4>Virtual Police Station</h4>
-                    <p>Phasellus convallis mauris sed elementum vulputate. Donec posuere leo sed dui eleifend hendrerit. Sed suscipit suscipit erat, sed vehicula ligula. Aliquam ut sem fermentum sem tincidunt lacinia gravida aliquam nunc. Morbi quis erat imperdiet, molestie nunc ut, accumsan diam.</p>
+                    <p>The concept of a virtual police station was initially proposed by AU vice-chancellor Prasad Reddy during the launch of Mahila Mitras in August. After DGP Gautam Sawang agreed to the idea, it was proposed that the initiative will be launched in all universities. </p>
                     <div class="main-button">
-                        <a href="#">View Schedule</a>
+                        <a href="">View Schedule</a>
                     </div>
                   </article>
                   <article id='tabs-2'>
@@ -468,7 +470,9 @@ https://templatemo.com/tm-548-training-studio
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-xs-12">
+                  
                     <div class="contact-form">
+                       <center><h2 style="color:white;margin-bottom:10px;">Feedback/Query</h2></center>
                         <form id="contact" action="contactscript.php" method="post">
                           <div class="row">
                             <div class="col-md-6 col-sm-12">
