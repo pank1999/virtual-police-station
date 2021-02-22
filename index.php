@@ -100,7 +100,7 @@ https://templatemo.com/tm-548-training-studio
                                 <?php 
                               }
                             ?>
-                            <li ><a class="btn btn-success" target="_blank" href="http://localhost/phpmyadmin/">Admin</a></li>
+                            <li ><a class="btn btn-success" style="background-color:green;color:black;" target="_blank" href="admin_login_page.php">Admin</a></li>
                             
                          </ul>        
                         <a class='menu-trigger'>
@@ -128,7 +128,7 @@ https://templatemo.com/tm-548-training-studio
                 <h6>CRIME FREE INDIA</h6>
                 <h2 >Virtual police station <em> <br> VPS</em></h2>
                 <div class="main-button scroll-to-section">
-                    <a href="firform.php">File-FIR</a>
+                    <a href="firform.php" class="btn btn-success" style="background-color:rgb(8, 99, 15);">File-FIR</a>
                 </div>
             </div>S
         </div>

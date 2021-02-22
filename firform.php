@@ -187,24 +187,12 @@ if(!isset($_SESSION['email'])){
                                         }
 
 
-</script>
+                                  </script>
 
                                 </div>  
-                                <label for="cars">select Tahsil</label>
+                                <label for="cars">Enter Pincode</label>
                                 <div  class="form-group">
-                                  <select name="Tahsil" id="cars" style="height:40px; width:500px;">
-                                         <option value="Amarpatan">Amarpatan</option>
-                                         <option value="Maihar">Maihar</option>
-                                          <option value="Nagod">Nagod</option>
-                                         <option value="Unchehra">Unchehra</option>
-                                         <option value="Raghuraj nagar">Raghuraj nagar</option>
-                                         <option value="Majhggawan">Majhggawan</option>
-                                         <option value="Ramnagar">Ramnagar</option>
-                                         <option value="Kotar">Kotar</option>
-                                         <option value="Rampur Baghelan">Rampur Baghelan</option>
-                                         <option value="Birsinghpur">Birsinghpur</option>
-                                         
-                                  </select>
+                                    <input type="number" name="pincode" placeholder="eg 485002" required=".{6}" >
                                 </div> 
 
 
