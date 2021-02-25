@@ -40,7 +40,7 @@ $con= new mysqli("localhost:3308","root","","virtual_police_station") or die(mys
 
   $html.= ' <table> ';
   $html.= ' <tr> <th>Tahsil</th> <th>Area of occurence </th> <th>Police Station</th> </tr>';
-  $html.='<tr> <td> '.  $row['Tahsil']. ' </td> <td> '.  $row['E_place']. ' </td> <td> '.  $row['Police_station']. ' </td> </tr>';
+  $html.='<tr> <td> '.  $row['pincode']. ' </td> <td> '.  $row['E_place']. ' </td> <td> '.  $row['Police_station']. ' </td> </tr>';
   $html.= '</table>';
   $html.='<br><br>';
 
