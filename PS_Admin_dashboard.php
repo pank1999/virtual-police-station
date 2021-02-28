@@ -2,17 +2,20 @@
 
 session_start();
 //include('profile.php');
-//if(!isset($_SESSION['email'])){
+if(!isset($_SESSION['user_name'])){
 
-  // echo "<script> alert('login first ') </script>";
-  // echo"<script> location.href='index.php' </script>";    
-//}
+   echo "<script> alert('login first ') </script>";
+   echo"<script> location.href='index.php' </script>";    
+}
 
 $con= new mysqli("localhost:3308","root","","virtual_police_station") or die(mysqli_error($con));
-$var=$_SESSION['aadhar'];
-
-$query1="SELECT * FROM event_details WHERE Aadhar_id='$var' ORDER BY Event_id DESC";
+$var=$_SESSION['pincode'];
+$psid=$_SESSION['police_station_id'];
+$ps=$_SESSION['ps'];
+//echo "valeu".$var;
+$query1="SELECT * FROM event_details WHERE pincode='$var' ORDER BY Event_id DESC" or die(mysqli_error($con));
 $run1=mysqli_query($con,$query1) or die(mysqli_error($query1));
+//$rows1=mysqli_fetch_array($run1);
 
 
 
@@ -52,20 +55,20 @@ $run1=mysqli_query($con,$query1) or die(mysqli_error($query1));
             <div class="row">
                 <div class="col-12">
                     <nav class="main-nav">
-                        <!-- ***** Logo Start ***** -->
+                        <!- ***** Logo Start ***** ->
                         <a href="index.html" class="logo"><img src="./assets/images/mp-police-logo.jpg" height="70px" width="100px" alt=""><em></em></a>
-                        <!-- ***** Logo End ***** -->
+                        <!- ***** Logo End ***** -->
                         
                         <!-- ***** Menu Start ***** -->
                         
                         <ul class="nav">
-                            <h3 style="float:left;margin-right:100px; color:white;">MAIHAR POLICE STATION</h3>
+                            <h3 style="float:left;margin-right:100px; color:white;"><?php  echo "".$ps; ?></h3>
                             <li class="scroll-to-section"><a href="index.php" class="" style="color:white; background-color:#2f3b4b;">Home</a></li>
                             <li class="scroll-to-section"><a href="#" data-toggle="modal" data-target="#profilemodel" style="color:white; background-color:#2f3b4b;">Profile</a></li>
                           <!--  <li class="scroll-to-section"><a href="#our-classes" style="color:white;">Classes</a></li>
                             <li class="scroll-to-section"><a href="#schedule" style="color:white;">Schedules</a></li>
                             <li class="scroll-to-section"><a href="#contact-us" style="color:white;">Contact</a></li> 
-                          -->
+                         -->
                             <li class="main-button"><a href="logout.php" data-toggle="modal" data-target="">logout</a></li>
                         </ul>        
                         <a class='menu-trigger'>
@@ -81,7 +84,7 @@ $run1=mysqli_query($con,$query1) or die(mysqli_error($query1));
     <div class="container-fluid" style="margin-top:10%;">
         <div class="row">
             <div class="col-lg-6">
-                <h4 style="float:left;color:rgb(228, 108, 10);">Police Station ID: <em>PS10101</em> </h4>
+                <h4 style="float:left;color:rgb(228, 108, 10);">Police Station ID: <em> <?php echo"".$psid; ?> </em> </h4>
             </div>
             <div class="col-lg-6">
                  <h4 style="float:right;color:rgb(228, 108, 10);">Pankaj Pandey <br> <em style="margin-left:40px;">(SHO)</em></h4>
