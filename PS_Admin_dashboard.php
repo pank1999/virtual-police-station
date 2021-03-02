@@ -50,37 +50,8 @@ $run1=mysqli_query($con,$query1) or die(mysqli_error($query1));
 </head>
 <body>
     <!-- ***** Header Area Start ***** -->
-    <header class="header-area header-sticky"  style="background-color:#313c4b; position:fixed; ">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <nav class="main-nav">
-                        <!- ***** Logo Start ***** ->
-                        <a href="index.html" class="logo"><img src="./assets/images/mp-police-logo.jpg" height="70px" width="100px" alt=""><em></em></a>
-                        <!- ***** Logo End ***** -->
-                        
-                        <!-- ***** Menu Start ***** -->
-                        
-                        <ul class="nav">
-                            <h3 style="float:left;margin-right:100px; color:white;"><?php  echo "".$ps; ?></h3>
-                            <li class="scroll-to-section"><a href="index.php" class="" style="color:white; background-color:#2f3b4b;">Home</a></li>
-                            <li class="scroll-to-section"><a href="#" data-toggle="modal" data-target="#profilemodel" style="color:white; background-color:#2f3b4b;">Profile</a></li>
-                          <!--  <li class="scroll-to-section"><a href="#our-classes" style="color:white;">Classes</a></li>
-                            <li class="scroll-to-section"><a href="#schedule" style="color:white;">Schedules</a></li>
-                            <li class="scroll-to-section"><a href="#contact-us" style="color:white;">Contact</a></li> 
-                         -->
-                            <li class="main-button"><a href="logout.php" data-toggle="modal" data-target="">logout</a></li>
-                        </ul>        
-                        <a class='menu-trigger'>
-                            <span>Menu</span>
-                        </a>
-                        <!-- ***** Menu End ***** -->
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </header> 
-
+    <?php include("include/header.php"); ?>
+    
     <div class="container-fluid" style="margin-top:10%;">
         <div class="row">
             <div class="col-lg-6">
@@ -105,6 +76,7 @@ $run1=mysqli_query($con,$query1) or die(mysqli_error($query1));
                          <TH>FIR TOPIC</TH>
                          <th>GET FIR COPY</th>
                          <TH>STATUS</TH>
+                         <th>UPDATE STATUS</th>
                      </tr>
                     <?php 
 
@@ -127,6 +99,8 @@ $run1=mysqli_query($con,$query1) or die(mysqli_error($query1));
                               <td>
                                 <a href="generatepdf.php?E_id=<?php  echo $rows['Event_id']; ?> "> <button class="btn btn-success">download</button></a>  </td>
                               <td style="color:green;"><?php echo $rows['FIR_STATUS'];?></td>
+
+                              <td><a href="update_fir_status.php" class="btn btn-info">Update</a></td>
 
                            </tr>
 
