@@ -121,6 +121,12 @@ if(!isset($_SESSION['email'])){
                                 <input type="file" name="C_Id_proof" class="form-control" placeholder="Aadhar card/voter id card/passport/pan card/driving licence" required="true" >
                                  
                            </div>
+
+
+                           <div class="form-group">
+                              
+                           
+                           </div>
                            <hr style="height:3px; background-color:#ed563b;">
 
                            
