@@ -10,8 +10,38 @@ if(!isset($_SESSION['email'])){
 //$query1="SELECT * FROM event_details";
 ///$run1=mysqli_query($con,$query1) or die(mysqli_error($query1));
 
+if(isset($_POST['sendotp'])) {
+    require('../include/textlocal.class.php');
+    require('../include/credential.php');
 
+    $textlocal = new Textlocal(false, false,API_KEY);
 
+    // You can access MOBILE from credential.php
+    // $numbers = array(MOBILE);
+    // Access enter mobile number in input box
+    $numbers = array($_POST['C_mobileno']);
+
+    $sender = 'TXTLCL';
+    $otp = mt_rand(10000, 99999);
+    $message = "Hello " . $_POST['C_name'] . " This is your OTP: " . $otp;
+
+    try {
+        $result = $textlocal->sendSms($numbers, $message, $sender);
+        setcookie('otp', $otp);
+        echo "OTP successfully send..";
+    } catch (Exception $e) {
+        die('Error: ' . $e->getMessage());
+    }
+}
+
+if(isset($_POST['verifyotp'])) { 
+    $otp = $_POST['otp'];
+    if($_COOKIE['otp'] == $otp) {
+        echo "Congratulation, Your mobile is verified.";
+    } else {
+        echo "Please enter correct otp.";
+    }
+}
 
 ?>
 <!DOCTYPE html>
@@ -35,8 +65,27 @@ if(!isset($_SESSION['email'])){
     <style>
      #suspect{
         display:inline-flex;
+    
      }
     </style>
+
+    <script type="text/javascript">
+        function func1(){
+            var value=document.getElementById("otpvalue");
+            var valuebtn=document.getElementById("verifybtn");
+
+            value.style.visibility="visible";
+            valuebtn.style.visibility="visible";
+
+
+
+
+        } 
+    
+    
+    </script>
+
+
 </head> 
 <body>
      
@@ -81,7 +130,7 @@ if(!isset($_SESSION['email'])){
                     <div class="panel-body">
 
                        <p class="text-warning"></p>
-                       <form   method="POST" action="firscript.php" enctype="multipart/form-data">
+                       <form   method="POST" role="form" enctype="multipart/form-data">
                             <center><h2>Complainant Details</h2></center>    
                             <label for="">Name of the complainant</label> <br>
 
@@ -105,10 +154,17 @@ if(!isset($_SESSION['email'])){
                                  
                             </div>
                             <label for="">Moblie number</label> <br>
+                            <!--mobile verification -->
                             <div class="form-group">
                                 <input type="text" name="C_mobileno" class="form-control" placeholder="+91 xxxxxxxxxx" required="true">
-                                 
+                                <br>
+                                <label for="">To verify mobile number click to send OTP button </label>  
+                                <button type="submit" name="sendotp" onclick="func1()" id="sendotpbtn" class="btn btn-info">SEND OTP</button> 
+                                <br>
+                                <input type="text" name="enteredotp" class="form-group" id="otpvalue" placeholder="Enter OTP to verify" hidden >
+                                <button type="submit" name="verifyotp" class="btn btn-success" id="verifybtn" hidden>VERIFY</button> 
                             </div>
+
                             <label for="">Aadhar card number</label>
 
                             <div class="form-group">
