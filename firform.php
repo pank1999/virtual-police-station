@@ -10,38 +10,7 @@ if(!isset($_SESSION['email'])){
 //$query1="SELECT * FROM event_details";
 ///$run1=mysqli_query($con,$query1) or die(mysqli_error($query1));
 
-if(isset($_POST['sendotp'])) {
-    require('../include/textlocal.class.php');
-    require('../include/credential.php');
 
-    $textlocal = new Textlocal(false, false,API_KEY);
-
-    // You can access MOBILE from credential.php
-    // $numbers = array(MOBILE);
-    // Access enter mobile number in input box
-    $numbers = array($_POST['C_mobileno']);
-
-    $sender = 'TXTLCL';
-    $otp = mt_rand(10000, 99999);
-    $message = "Hello " . $_POST['C_name'] . " This is your OTP: " . $otp;
-
-    try {
-        $result = $textlocal->sendSms($numbers, $message, $sender);
-        setcookie('otp', $otp);
-        echo "OTP successfully send..";
-    } catch (Exception $e) {
-        die('Error: ' . $e->getMessage());
-    }
-}
-
-if(isset($_POST['verifyotp'])) { 
-    $otp = $_POST['otp'];
-    if($_COOKIE['otp'] == $otp) {
-        echo "Congratulation, Your mobile is verified.";
-    } else {
-        echo "Please enter correct otp.";
-    }
-}
 
 ?>
 <!DOCTYPE html>
@@ -67,25 +36,12 @@ if(isset($_POST['verifyotp'])) {
         display:inline-flex;
     
      }
+
+    
+    
     </style>
 
-    <script type="text/javascript">
-        function func1(){
-            var value=document.getElementById("otpvalue");
-            var valuebtn=document.getElementById("verifybtn");
-
-            value.style.visibility="visible";
-            valuebtn.style.visibility="visible";
-
-
-
-
-        } 
     
-    
-    </script>
-
-
 </head> 
 <body>
      
@@ -130,60 +86,57 @@ if(isset($_POST['verifyotp'])) {
                     <div class="panel-body">
 
                        <p class="text-warning"></p>
-                       <form   method="POST" role="form" enctype="multipart/form-data">
+                       <form   method="POST" role="form" action="firscript.php" enctype="multipart/form-data">
                             <center><h2>Complainant Details</h2></center>    
                             <label for="">Name of the complainant</label> <br>
 
                             <div class="form-group">
-                                <input type="text" name="C_name" class="form-control" placeholder="Full Name" required="true">
+                                <input type="text" name="C_name" class="form-control" placeholder="Full Name" required="true" >
                                  
                             </div>
                             <label for="">Complainant's  District</label> <br>
                             <div class="form-group">
-                                <input type="text" name="C_district" class="form-control" placeholder="eg. satna" required="true" >
+                                <input type="text" name="C_district" class="form-control" placeholder="eg. satna"  required="true" >
                                  
                             </div>
                             <label for=""> complainant's Father Name</label> <br>
                             <div class="form-group">
-                                <input type="text" name="C_fathername" class="form-control" placeholder="Full Name" required="true" >
+                                <input type="text" name="C_fathername" class="form-control" placeholder="Full Name" required="true"   >
                                  
                             </div>
                             <label for="">Address of complainant</label> <br>
                             <div class="form-group">
-                                <input type="text" name="C_address" class="form-control" placeholder="address" required="true">
+                                <input type="text" name="C_address" class="form-control" placeholder="address" required="true" >
                                  
                             </div>
                             <label for="">Moblie number</label> <br>
                             <!--mobile verification -->
                             <div class="form-group">
-                                <input type="text" name="C_mobileno" class="form-control" placeholder="+91 xxxxxxxxxx" required="true">
+                                <input type="text" name="C_mobileno" class="form-control" placeholder="+91 xxxxxxxxxx" required="true" >
                                 <br>
                                 <label for="">To verify mobile number click to send OTP button </label>  
-                                <button type="submit" name="sendotp" onclick="func1()" id="sendotpbtn" class="btn btn-info">SEND OTP</button> 
+                                <button type="submit" name="sendotp" value="sendotp" onclick="func1()" id="sendotpbtn" class="btn btn-info">SEND OTP</button> 
                                 <br>
-                                <input type="text" name="enteredotp" class="form-group" id="otpvalue" placeholder="Enter OTP to verify" hidden >
-                                <button type="submit" name="verifyotp" class="btn btn-success" id="verifybtn" hidden>VERIFY</button> 
+                                <input type="text" name="enteredotp" class="form-group" id="otpvalue" placeholder="Enter OTP to verify"  >
+                                <button type="submit" name="verifyotp" value="verifyotp" class="btn btn-success" id="verifybtn" >VERIFY</button> 
                             </div>
 
                             <label for="">Aadhar card number</label>
 
                             <div class="form-group">
-                                <input type="text" name="Aadhar_id" class="form-control" placeholder="Aadhar card number" required="true" pattern=".{12}" >
+                                <input type="text" name="Aadhar_id" class="form-control" placeholder="Aadhar card number" required="true"  pattern=".{12}" >
                                  
                            </div>
                             <label for="">Valid ID Proof copy with self attested</label>
 
                             <div class="form-group">
-                                <input type="file" name="C_Id_proof" class="form-control" placeholder="Aadhar card/voter id card/passport/pan card/driving licence" required="true" >
+                                <input type="file" name="C_Id_proof" class="form-control" required="true"  placeholder="Aadhar card/voter id card/passport/pan card/driving licence"  >
                                  
                            </div>
 
-
-                           <div class="form-group">
-                              
-                           
-                           </div>
                            <hr style="height:3px; background-color:#ed563b;">
+
+
 
                            
                            <center><h2>Witness Details</h2></center>    
@@ -223,12 +176,12 @@ if(isset($_POST['verifyotp'])) {
                            <center><h2>Event Details</h2></center>
                            <label>FIR TYPE</label> <br>
                             <div class="form-group">
-                                <input type="text" name="FIR_TYPE" class="form-control" placeholder="" required="true">
+                                <input type="text" name="FIR_TYPE" class="form-control" placeholder="" required="true" >
                                  
                             </div>
                              <label for="cars">select place of crime</label>
                                 <div  class="form-group">
-                                  <select name="cars" id="cars" onclick="F1();" style="height:40px; width:500px;">
+                                  <select name="cars" id="cars" onclick="F1();" style="height:40px; width:500px;" required="true" >
                                          <option value=""  id="0">select Area</option>
                                          <option value="Maihar Police station"  id="1">Maihar</option>
                                          <option value="satna Police station" id="2">satna</option>
@@ -254,7 +207,7 @@ if(isset($_POST['verifyotp'])) {
                                 </div>  
                                 <label for="cars">Enter Pincode</label>
                                 <div  class="form-group">
-                                    <input type="number" name="pincode" placeholder="eg 485002" required=".{6}" >
+                                    <input type="number" name="pincode" placeholder="eg 485002" required="true"  >
                                 </div> 
 
 
@@ -291,17 +244,17 @@ if(isset($_POST['verifyotp'])) {
 
                            <label for="">Place of Occurrence</label> <br>
                             <div class="form-group">
-                                <input type="text" name="E_place" class="form-control" style="height:50px; " placeholder="Address" required="true">
+                                <input type="text" name="E_place" class="form-control" style="height:50px; "  required="true" placeholder="Address">
                                  
                             </div>
                             <label for="">Date of Occurrence</label> <br>
                             <div class="form-group">
-                                <input type="Date" name="E_date" class="form-control" style="height:30px; width:500px;" placeholder="DD/MM/YYYY" required="true">
+                                <input type="Date" name="E_date" class="form-control" style="height:30px; width:500px;" required="true"  placeholder="DD/MM/YYYY" >
                                  
                             </div>
                             <label for="">Time of Occurrence</label> <br>
                             <div class="form-group">
-                                <input type="time" name="E_time" class="form-control" style="height:30px; width:500px;" placeholder="DD/MM/YYYY" required="true">
+                                <input type="time" name="E_time" class="form-control" style="height:30px; width:500px;" required="true"  placeholder="DD/MM/YYYY" >
                                  
                             </div>
                             <label for="">Any suspect</label>
@@ -314,13 +267,13 @@ if(isset($_POST['verifyotp'])) {
                             <label for="">Event Discription in the form of formal letter </label>
                             <p>Note: letter should contains all event  details in chronological order with legal signature containing date and time. </p>
                             <div class="form-group">
-                                <input type="file" name="E_description" class="form-control" placeholder="" required="true" >
+                                <input type="file" name="E_description" class="form-control" placeholder="" required="true"  >
                                  
                            </div>
                             
                             <label for="">Any avidence/proof regarding event</label>
                             <div class="form-group">
-                                <input type="file" name="E_anyproof" class="form-control" placeholder="Aadhar card/voter id card/passport/pan card/driving licence" required="true" >
+                                <input type="file" name="E_anyproof" class="form-control" required="true" placeholder="Aadhar card/voter id card/passport/pan card/driving licence"  >
                                  
                            </div>
 
@@ -330,7 +283,7 @@ if(isset($_POST['verifyotp'])) {
                             <br> <br>
                             
                                                       
-                         <center><button class="btn btn-danger" type="submit" style="width:300px; background-color:#ed563b;font-size:30px;">Submit</button></center>  
+                         <center><button class="btn btn-danger" type="submit" name="finalsubmit" style="width:300px; background-color:#ed563b;font-size:30px;">Submit</button></center>  
                        </form>
 
                     </div>

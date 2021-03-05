@@ -100,7 +100,7 @@ $run1=mysqli_query($con,$query1) or die(mysqli_error($query1));
                                 <a href="generatepdf.php?E_id=<?php  echo $rows['Event_id']; ?> "> <button class="btn btn-success">download</button></a>  </td>
                               <td style="color:green;"><?php echo $rows['FIR_STATUS'];?></td>
 
-                              <td><a href="update_fir_status.php" class="btn btn-info">Update</a></td>
+                              <td><a href="update_fir_status.php?E_id=<?php  echo $rows['Event_id']; ?>" class="btn btn-info">Update</a></td>
 
                            </tr>
 

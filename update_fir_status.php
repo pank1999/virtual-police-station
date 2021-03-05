@@ -12,8 +12,10 @@ $var=$_SESSION['pincode'];
 $psid=$_SESSION['police_station_id'];
 $ps=$_SESSION['ps'];
 
+$Eid= $_GET['E_id'];
+
 //echo "valeu".$var;
-$query1="SELECT * FROM event_details WHERE pincode='$var' ORDER BY Event_id DESC" or die(mysqli_error($con));
+$query1="SELECT * FROM event_details WHERE Event_id='$Eid' ORDER BY Event_id DESC" or die(mysqli_error($con));
 $run1=mysqli_query($con,$query1) or die(mysqli_error($query1));
 //$rows1=mysqli_fetch_array($run1);
 $rows=mysqli_fetch_array($run1);
@@ -89,6 +91,7 @@ $rows=mysqli_fetch_array($run1);
                  
                  
                  </form>
+                 
 
             </div>
             
