@@ -1,10 +1,16 @@
 <?php 
+ 
+
+
 
 if(isset($_POST['sendotp'])) {
     require('include/textlocal.class.php');
-    require('include/credential.php');
+    //require('include/credential.php');
+
+
+
   
-    $textlocal = new Textlocal(false, false,API_KEY);
+    $textlocal = new Textlocal(false, false,'WaQKeYacIcQ-dJK6zYl4vEkDi9QG6CLeKOvSlzdzFe');
   
     // You can access MOBILE from credential.php
     // $numbers = array(MOBILE);
@@ -13,14 +19,14 @@ if(isset($_POST['sendotp'])) {
   
     $sender = 'TXTLCL';
     $otp = mt_rand(10000, 99999);
-    $message = "Hello " . $_POST['C_name'] . " This is your OTP: " . $otp;
+    $message = "Hello " . $_GET['c_name'] . " This is your OTP: " . $otp;
   
     try {
         $result = $textlocal->sendSms($numbers, $message, $sender);
         setcookie('otp', $otp);
         echo "OTP successfully send..";
     } catch (Exception $e) {
-        die('Error: ' . $e->getMessage());
+        die('error: ' . $e->getMessage());
     }
   }
 
@@ -69,17 +75,39 @@ if(isset($_POST['sendotp'])) {
 <body>
 <?php include('include/header_1.php'); ?>
 
-     <form action="" method="post" style="margin-top:10%;" >   
-        <div class="form-group">
-            <input type="text" name="C_mobileno" class="form-control" placeholder="+91 xxxxxxxxxx" required="true" >
-            <br>
-            <label for="">To verify mobile number click to send OTP button </label>  
-            <button type="submit" name="sendotp" value="sendotp" onclick="func1()" id="sendotpbtn" class="btn btn-info">SEND OTP</button> 
-            <br>
-            <input type="text" name="enteredotp" class="form-group" id="otpvalue" placeholder="Enter OTP to verify"  >
-             <button type="submit" name="verifyotp" value="verifyotp" class="btn btn-success" id="verifybtn" >VERIFY</button> 
-         </div>
+    
+        <div class="col-lg-6" style="margin-top:10%; margin-left:25%;">
+            <div>
+              <center> <h3>Real Time User Verification/Authentication</h3></center> <br>
+            
+            </div>
+           <form action="" method="post"  >   
+             <div class="form-group">
+                 <label for="">Enter Mobile number </label>
+                <input type="text" name="C_mobileno" class="form-control"  placeholder="+91 xxxxxxxxxx" required="true" >
+            
+             </div>
+            <div  class="form-group">
+                <label for="">To verify mobile number click to send OTP button </label>  
 
-         </form>   
+            
+            </div>
+
+            
+              <button type="submit" name="sendotp" value="sendotp" onclick="func1()" id="sendotpbtn"  class="btn btn-info">SEND OTP</button> 
+            
+
+            <div   class="form-group">
+                <br>
+                <input type="text" name="enteredotp" class="form-control" id="otpvalue" placeholder="Enter OTP to verify"   >
+            
+            </div>
+             <button type="submit" name="verifyotp" value="verifyotp" class="btn btn-success" id="verifybtn">VERIFY</button> 
+         
+
+           </form> 
+           
+         </div> 
+    
 </body>
 </html>

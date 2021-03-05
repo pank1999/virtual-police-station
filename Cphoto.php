@@ -12,9 +12,9 @@
 <style>
  #camera{
 
-width:400px;
-height:400px;
-border:1px solid black;
+width:500px;
+height:500px;
+border:1px solid green;
 
 }
 </style>
@@ -25,7 +25,9 @@ border:1px solid black;
 
   <!--taking photo --->
                                   
-   <center><div id="camera"> </div>
+   <center>
+  
+   <div id="camera" style="margin-top:10%;"> </div>
                                    
    <button onclick="take_snapshot()">Capture Image</button></center> 
 </body>
@@ -36,10 +38,11 @@ border:1px solid black;
 
  <script>
       Webcam.set({
-         width:400,
-         height:400,
+         width:200,
+         height:200,
          image_format:'jpeg',
-         jpeg_quality:90
+         jpeg_quality:90,
+        
 
        })
       Webcam.attach("#camera")
@@ -59,22 +62,28 @@ border:1px solid black;
                                    
                                    
                                    
-  <center><div id="results"  >
+  <center>  
+          <div id="results"  >
                                         
           </div>
-                                      
-         <a href="mobileverification.php"> 
+          <?php 
+       
+             // if(isset($_SESSION['photosubmit'])){
+  
+             // echo"<script>alert('successfully submitted');</script>";
+             //echo"<script>location:href='mobileverification.php';</script>";
+             // }
+             $cname=$_GET['c_name'];
+                                        
+          ?>                
+           <a href="mobileverification.php?c_name=$cname">
             <button type="submit" name="photosubmit" class="btn btn-succes btn-mediam">Submit</button>
-        
-        </a>
+            </a>
   </center>
                                       
                                       
                                       
-  <?php 
-        $a=$_GET['adhar'];
-                                      
-   ?>
+  
                                    
 
                     

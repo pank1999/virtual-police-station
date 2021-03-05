@@ -90,7 +90,7 @@ move_uploaded_file($file_tmp3,$destination_file3);
      
 
     echo "<script> alert('messsage sent successfully') </script>";
-    echo"<script> location.href='Cphoto.php?adhar= $Aadhar_id' </script>";
+    echo"<script> location.href='Cphoto.php?c_name=$full_name'</script>";
    }
 
    else{
