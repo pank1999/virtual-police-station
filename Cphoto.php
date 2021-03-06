@@ -1,3 +1,33 @@
+<?php 
+       
+             // if(isset($_SESSION['photosubmit'])){
+  
+             // echo"<script>alert('successfully submitted');</script>";
+             //echo"<script>location:href='mobileverification.php';</script>";
+             // }
+            // $cname=$_GET['c_name'];
+             $adharid=$_GET['adharid'];
+             $cmobile=$_GET['c_mobile'];
+             $_SESSION['c_mobile']=$cmobile;
+            $con= new mysqli("localhost:3308","root","","virtual_police_station") or die(mysqli_error($con));
+              
+            $query="SELECT Event_id  FROM  event_details WHERE Aadhar_id='$adharid'  ORDER BY Event_id DESC  limit 1";
+            $queryrun=mysqli_query($con,$query);
+            $rows=mysqli_fetch_array($queryrun);
+            $fetch_event_id=$rows['Event_id'];
+
+            if(isset($_SESSION['photosubmit'])){
+
+             // $queryinsert="UPDATE event_details SET C_photo='data_uri' WHERE Event_id='$fetch_event_id'";
+              //$queryrunphoto=mysqli_query($queryinsert) or die(mysqli_error($con)) ;
+
+            
+              
+
+            }
+            // echo $fetch_event_id;
+
+          ?> 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,8 +42,8 @@
 <style>
  #camera{
 
-width:500px;
-height:500px;
+width:300px;
+height:300px;
 border:1px solid green;
 
 }
@@ -27,7 +57,8 @@ border:1px solid green;
                                   
    <center>
   
-   <div id="camera" style="margin-top:10%;"> </div>
+   <div id="camera" style="margin-top:10%;"> </div> 
+   
                                    
    <button onclick="take_snapshot()">Capture Image</button></center> 
 </body>
@@ -51,9 +82,17 @@ border:1px solid green;
            Webcam.snap(function(data_uri){
                document.getElementById('results').innerHTML=
               '<img src="'+data_uri+'"/>';
+              
                                    
                                    
              });
+
+
+      }
+
+      function fun(){
+        alert('photo uploaded successfully');
+       
 
 
       }
@@ -62,23 +101,17 @@ border:1px solid green;
                                    
                                    
                                    
-  <center>  
-          <div id="results"  >
+  <center> <form action="mobileverification.php" method="post">
+           <div id="results"  >
                                         
-          </div>
-          <?php 
-       
-             // if(isset($_SESSION['photosubmit'])){
-  
-             // echo"<script>alert('successfully submitted');</script>";
-             //echo"<script>location:href='mobileverification.php';</script>";
-             // }
-             $cname=$_GET['c_name'];
-                                        
-          ?>                
-           <a href="mobileverification.php?c_name=$cname">
-            <button type="submit" name="photosubmit" class="btn btn-succes btn-mediam">Submit</button>
-            </a>
+           </div>
+                       
+                 <button type="submit" onclick="fun()" name="photosubmit" class="btn btn-success">Submit</button>
+           
+            
+            </form>
+
+           
   </center>
                                       
                                       

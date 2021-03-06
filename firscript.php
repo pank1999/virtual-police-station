@@ -46,7 +46,7 @@ move_uploaded_file($file_tmp3,$destination_file3);
 
   $E_place = mysqli_real_escape_string($con,$_POST['E_place']);
   $E_date = mysqli_real_escape_string($con,$_POST['E_date']);
-  // $E_time =  mysqli_real_escape_string($con,$_POST['E_time']);
+  //$E_time =  mysqli_real_escape_string($con,$_POST['E_time']);
   $E_suspect=mysqli_real_escape_string($con,$_POST['E_suspect']);
   $E_description=$_FILES['E_description'];
 
@@ -90,7 +90,7 @@ move_uploaded_file($file_tmp3,$destination_file3);
      
 
     echo "<script> alert('messsage sent successfully') </script>";
-    echo"<script> location.href='Cphoto.php?c_name=$full_name'</script>";
+    echo"<script> location.href='Cphoto.php?c_mobile=$C_mobileno && adharid=$Aadhar_id'</script>";
    }
 
    else{

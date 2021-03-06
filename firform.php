@@ -110,16 +110,10 @@ if(!isset($_SESSION['email'])){
                                  
                             </div>
                             <label for="">Moblie number</label> <br>
-                            <!--mobile verification -->
-                            <div class="form-group">
-                                <input type="text" name="C_mobileno" class="form-control" placeholder="+91 xxxxxxxxxx" required="true" >
-                                <br>
-                                <label for="">To verify mobile number click to send OTP button </label>  
-                                <button type="submit" name="sendotp" value="sendotp" onclick="func1()" id="sendotpbtn" class="btn btn-info">SEND OTP</button> 
-                                <br>
-                                <input type="text" name="enteredotp" class="form-group" id="otpvalue" placeholder="Enter OTP to verify"  >
-                                <button type="submit" name="verifyotp" value="verifyotp" class="btn btn-success" id="verifybtn" >VERIFY</button> 
-                            </div>
+                            <input type="text" name="C_mobileno" value="" class="form-control" placeholder="+91 xxxxxxxxxx" >
+                                 
+
+                            
 
                             <label for="">Aadhar card number</label>
 
@@ -161,9 +155,10 @@ if(!isset($_SESSION['email'])){
                                 <input type="text" name="W_address"  value="NA"class="form-control" placeholder="address">
                                  
                             </div>
-                            <label for="">Moblie number</label> <br>
+                            
                             <div class="form-group">
-                                <input type="text" name="W_mobileno" value="0000000000" class="form-control" placeholder="+91 xxxxxxxxxx">
+                                <label for="">Moblie number</label> 
+                                <input type="text" name="W_mobileno" value="00000000000" class="form-control" placeholder="+91 xxxxxxxxxx" >
                                  
                             </div>
                             <label for="">Valid ID Proof copy with self attested</label>

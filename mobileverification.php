@@ -81,10 +81,10 @@ if(isset($_POST['sendotp'])) {
               <center> <h3>Real Time User Verification/Authentication</h3></center> <br>
             
             </div>
-           <form action="" method="post"  >   
+           <form action="userdashboard.php" method="post"  >   
              <div class="form-group">
                  <label for="">Enter Mobile number </label>
-                <input type="text" name="C_mobileno" class="form-control"  placeholder="+91 xxxxxxxxxx" required="true" >
+                <input type="text" name="C_mobileno" value="<?php echo $_SESSION['c_mobile'];?>" class="form-control" disabled>
             
              </div>
             <div  class="form-group">
