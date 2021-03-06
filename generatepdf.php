@@ -26,9 +26,8 @@ $con= new mysqli("localhost:3308","root","","virtual_police_station") or die(mys
    $query=mysqli_query($con,$query1);
  
    $row=mysqli_fetch_array($query);
+
  
-
-
    $html= '<center><h1 style="margin-left:150px;"><u>FIRST INFORMATION REPORT</u></h1><h4 style="margin-left:250px;">(Under section 154 Cr.pc)</h4></center><br> ';
    $html.='<style> .table,th,td{ cell-padding:10px;  width:80%;border:1px solid black; border-collapse:collapse; text-align:left;border-spacing:2px; }  h4{ font-size:20px;} </style>';
 
