@@ -15,7 +15,7 @@ $row=mysqli_num_rows($run);
 
 if($row==0){
     echo "<script>alert('No Such Admin exists !')</script>";
-    // echo"<script>location.href='index.php'</script>";
+    echo"<script>location.href='admin_login_page.php'</script>";
     
 }
 else{

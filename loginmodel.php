@@ -8,7 +8,7 @@
           <h4 style="text-color:red;background-color: rgb(221, 107, 13); float:left;"><span class="glyphicon glyphicon-lock"></span> Login</h4>
         </div>
         <div class="modal-body">
-            <p>Don't have an account? <a href="index.php" style="color:black;">sign up</a></p>
+            <p>Don't have an account? <a href="#" data-toggle="modal" data-target="#signupmodel" style="color:black;">sign up</a></p>
             <form action="loginscript.php" method="POST">
             <div class="form-group">
               <label for="email"><span class="glyphicon glyphicon-user"></span> Email</label>
