@@ -75,7 +75,7 @@ $con= new mysqli("localhost:3308","root","","virtual_police_station") or die(mys
   $html.='<tr> <th>Any suspect:</th> <td><h4>'. $row['E_suspect'] .'</h4></td> </tr>';
   $html.= '</table>';
   $imagename=$row['E_description'];
-  $html.='<div> <h4> 4. EVENT DESCRIPTION </h4> <img src="E_description/'.$imagename.'" style="height:auto; width:auto;" ></div>';
+  $html.='<div> <h4> 4. EVENT DESCRIPTION </h4> <img src="E_description/'.$imagename.'" style="height:500px; width:800px;" ></div>';
   
   
   $html.='<div> <h4 style="margin-left:420px;">Station House Officer</h4> <img src="assets/images/stamp.jpg" style="margin-left:470px; height:100px;width:100px;" ></div>';

@@ -240,7 +240,7 @@ if(!isset($_SESSION['email'])){
                             
                             <label for="">Any avidence/proof regarding event</label>
                             <div class="form-group">
-                                <input type="file" name="E_anyproof" class="form-control" required="true" placeholder="Aadhar card/voter id card/passport/pan card/driving licence"  >
+                                <input type="file" name="E_anyproof" class="form-control"  placeholder="Aadhar card/voter id card/passport/pan card/driving licence"  >
                                  
                            </div>
 

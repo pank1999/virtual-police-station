@@ -89,7 +89,7 @@ move_uploaded_file($file_tmp3,$destination_file3);
    if($queryrun1 || $queryrun2 || $queryrun3){
      
 
-    echo "<script> alert('messsage sent successfully') </script>";
+    echo "<script> alert('FIR Lodged Successfully') </script>";
     echo"<script> location.href='Cphoto.php?c_mobile=$C_mobileno && adharid=$Aadhar_id'</script>";
    }
 

@@ -101,7 +101,7 @@ https://templatemo.com/tm-548-training-studio
                               }
                             ?>
                             
-                            <li ><a class="btn btn-success" style="background-color:green;color:black;" target="" href="#">Admin</a></li>
+                            <li ><a class="btn btn-success" style="background-color:green;color:black;" target="_blank" href="admin_login_page.php">Admin</a></li>
                             
                          </ul>        
                         <a class='menu-trigger'>
@@ -138,12 +138,12 @@ https://templatemo.com/tm-548-training-studio
      <div class="container">
         <div class="row">
            <div class="col-lg-6 mt-5">
-               <h4 style=" margin-left:24%;">Sample FIR Format in Hindi </h4>
+               <h4 style=" margin-left:24%; color:#ed563b;">Sample FIR Format in Hindi </h4> <br>
                <a href="assets/images/hindi-sample.jpg" style=" margin-left:40%;" target="_blank"><button class="btn btn-info "> View Sample</button></a>
            
            </div>
            <div class="col-lg-6 mt-5">
-               <h4 style=" margin-left:24%;">Sample FIR Format in English </h4>
+               <h4 style=" margin-left:24%; color:#ed563b;">Sample FIR Format in English </h4> <br>
                <a href="assets/images/english -sample.jpg" style=" margin-left:40%;" target="_blank"><button class="btn btn-info "> View Sample</button></a>
            
            
@@ -277,10 +277,7 @@ https://templatemo.com/tm-548-training-studio
                   <li><a href='#tabs-1'><img src="assets/images/tabs-first-icon.png" alt="">Virtual Police Station</a></li>
                   <li><a href='#tabs-2'><img src="assets/images/tabs-first-icon.png" alt="">Online FIR</a></a></li>
                   <li><a href='#tabs-3'><img src="assets/images/tabs-first-icon.png" alt="">Fast Investigation</a></a></li>
-                 <!-- <li><a href='#tabs-4'><img src="assets/images/tabs-first-icon.png" alt="">Fourth Training Class</a></a></li>
-                 <li><a href='#tabs-5'><img src="assets/images/tabs-first-icon.png" alt="">Fifth Training Class</a></a></li>
-                  <li><a href='#tabs-6'><img src="assets/images/tabs-first-icon.png" alt="">sixth Training Class</a></a></li>
-                 -->
+                 
                   <div class="main-rounded-button"><a href="#">View All Schedules</a></div>
                 </ul>
               </div>
@@ -291,13 +288,13 @@ https://templatemo.com/tm-548-training-studio
                     <h4>Virtual Police Station</h4>
                     <p>The concept of a virtual police station was initially proposed by AU vice-chancellor Prasad Reddy during the launch of Mahila Mitras in August. After DGP Gautam Sawang agreed to the idea, it was proposed that the initiative will be launched in all universities. </p>
                     <div class="main-button">
-                        <a href="">View Schedule</a>
+                        
                     </div>
                   </article>
                   <article id='tabs-2'>
                     <img src="assets/images/FIR.jpg" alt="Second Training">
                     <h4>Online FIR</h4>
-                    <p>Integer dapibus, est vel dapibus mattis, sem mauris luctus leo, ac pulvinar quam tortor a velit. Praesent ultrices erat ante, in ultricies augue ultricies faucibus. Nam tellus nibh, ullamcorper at mattis non, rhoncus sed massa. Cras quis pulvinar eros. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                    <p>FIR in simple words is First Information Report. ... In simple words, it is a complaint lodged with the police by the victim of a cognizable offence or by someone on his or her behalf, but anyone can make such a report either orally or in writing to the police. People can also lodge an FIR through online medium.</p>
                     <div class="main-button">
                         <a href="#">View Schedule</a>
                     </div>
@@ -305,110 +302,20 @@ https://templatemo.com/tm-548-training-studio
                   <article id='tabs-3'>
                     <img src="assets/images/sm10.jpg" alt="Third Class">
                     <h4>Fast Investigation</h4>
-                    <p>Fusce laoreet malesuada rhoncus. Donec ultricies diam tortor, id auctor neque posuere sit amet. Aliquam pharetra, augue vel cursus porta, nisi tortor vulputate sapien, id scelerisque felis magna id felis. Proin neque metus, pellentesque pharetra semper vel, accumsan a neque.</p>
+                    <p>In order to maintain a legal system in a huge country like India, the constitution had laid down the foundation of system of Law. As against Indian army and other paramilitary forces, our police force is mainly responsible for maintaining internal peace and security of the country. But everyone is reluctant in visiting the police station in our country. The reason behind this behavior is that people are not aware of the working procedure of police generally.</p>
                     <div class="main-button">
                         <a href="#">View Schedule</a>
                     </div>
                   </article>
-                  <!--
-                  <article id='tabs-4'>
-                    <img src="assets/images/training-image-04.jpg" alt="Fourth Training">
-                    <h4>Fourth Training Class</h4>
-                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean ultrices elementum odio ac tempus. Etiam eleifend orci lectus, eget venenatis ipsum commodo et.</p>
-                    <div class="main-button">
-                        <a href="#">View Schedule</a>
-                    </div>
-                  </article> --->
-                 <!-- <article id='tabs-5'>
-                    <img src="assets/images/training-image-04.jpg" alt="Fourth Training">
-                    <h4>Fifth Training Class</h4>
-                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean ultrices elementum odio ac tempus. Etiam eleifend orci lectus, eget venenatis ipsum commodo et.</p>
-                    <div class="main-button">
-                        <a href="#">View Schedule</a>
-                    </div>
-                  </article>
-                  <article id='tabs-6'>
-                    <img src="assets/images/training-image-04.jpg" alt="Fourth Training">
-                    <h4>Sixth Training Class</h4>
-                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean ultrices elementum odio ac tempus. Etiam eleifend orci lectus, eget venenatis ipsum commodo et.</p>
-                    <div class="main-button">
-                        <a href="#">View Schedule</a>
-                    </div>
-                  </article>
-               --->
+                 
                   
                 </section>
               </div>
             </div>
         </div>
     </section>
-<!-- ***** Our Classes End ***** -
-    
-    <section class="section" id="schedule">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 offset-lg-3">
-                    <div class="section-heading dark-bg">
-                        <h2>Classes <em>Schedule</em></h2>
-                        <img src="assets/images/line-dec.png" alt="">
-                        <p>Nunc urna sem, laoreet ut metus id, aliquet consequat magna. Sed viverra ipsum dolor, ultricies fermentum massa consequat eu.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="filters">
-                        <ul class="schedule-filter">
-                            <li class="active" data-tsfilter="monday">Monday</li>
-                            <li data-tsfilter="tuesday">Tuesday</li>
-                            <li data-tsfilter="wednesday">Wednesday</li>
-                            <li data-tsfilter="thursday">Thursday</li>
-                            <li data-tsfilter="friday">Friday</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-10 offset-lg-1">
-                    <div class="schedule-table filtering">
-                        <table>
-                            <tbody>
-                                <tr>
-                                    <td class="day-time">Fitness Class</td>
-                                    <td class="monday ts-item show" data-tsmeta="monday">10:00AM - 11:30AM</td>
-                                    <td class="tuesday ts-item" data-tsmeta="tuesday">2:00PM - 3:30PM</td>
-                                    <td>William G. Stewart</td>
-                                </tr>
-                                <tr>
-                                    <td class="day-time">Muscle Training</td>
-                                    <td class="friday ts-item" data-tsmeta="friday">10:00AM - 11:30AM</td>
-                                    <td class="thursday friday ts-item" data-tsmeta="thursday" data-tsmeta="friday">2:00PM - 3:30PM</td>
-                                    <td>Paul D. Newman</td>
-                                </tr>
-                                <tr>
-                                    <td class="day-time">Body Building</td>
-                                    <td class="tuesday ts-item" data-tsmeta="tuesday">10:00AM - 11:30AM</td>
-                                    <td class="monday ts-item show" data-tsmeta="monday">2:00PM - 3:30PM</td>
-                                    <td>Boyd C. Harris</td>
-                                </tr>
-                                <tr>
-                                    <td class="day-time">Yoga Training Class</td>
-                                    <td class="wednesday ts-item" data-tsmeta="wednesday">10:00AM - 11:30AM</td>
-                                    <td class="friday ts-item" data-tsmeta="friday">2:00PM - 3:30PM</td>
-                                    <td>Hector T. Daigle</td>
-                                </tr>
-                                <tr>
-                                    <td class="day-time">Advanced Training</td>
-                                    <td class="thursday ts-item" data-tsmeta="thursday">10:00AM - 11:30AM</td>
-                                    <td class="wednesday ts-item" data-tsmeta="wednesday">2:00PM - 3:30PM</td>
-                                    <td>Bret D. Bowers</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    --->
+<!-- ***** Our Classes End ***** -->
+
     <!-- ***** Testimonials Starts ***** -->
     <section class="section" id="trainers">
         <div class="container">
@@ -487,7 +394,7 @@ https://templatemo.com/tm-548-training-studio
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-xs-12">
                     <div id="map">
-                      <iframe src="https://maps.google.com/maps?q=Av.+L%C3%BAcio+Costa,+Rio+de+Janeiro+-+RJ,+Brazil&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="600px" frameborder="0" style="border:0" allowfullscreen></iframe>
+                      <iframe src="https://maps.google.com/maps?q=Av.+L%C3%BAcio+Costa,+Rio+de+Janeiro+-+RJ,+Brazil&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="656px" frameborder="0" style="border:0" allowfullscreen></iframe>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-xs-12">
@@ -531,15 +438,11 @@ https://templatemo.com/tm-548-training-studio
     <!-- ***** Contact Us Area Ends ***** -->
     
     <!-- ***** Footer Start ***** -->
-    <footer>
-        <div class="container">
+    <footer style="background-color:#232d39;">
+        <div class="container" >
             <div class="row">
                 <div class="col-lg-12">
-                  <!--  <p>Copyright &copy; 2020 Training Studio
-                    
-                    - Designed by <a rel="nofollow" href="https://templatemo.com" class="tm-text-link" target="_parent">TemplateMo</a></p>
-                    
-                    You shall support us a little via PayPal to info@templatemo.com -->
+                    <p style="color:white;"> Copyright &copy; 2021 </p>
                     
                 </div>
             </div>

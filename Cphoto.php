@@ -42,8 +42,8 @@
 <style>
  #camera{
 
-width:300px;
-height:300px;
+width:350px;
+height:350px;
 border:1px solid green;
 
 }
@@ -101,7 +101,7 @@ border:1px solid green;
                                    
                                    
                                    
-  <center> <form action="mobileverification.php" method="post">
+  <center> <form action="userdashboard.php" method="post">
            <div id="results"  >
                                         
            </div>
