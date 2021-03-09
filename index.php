@@ -100,7 +100,8 @@ https://templatemo.com/tm-548-training-studio
                                 <?php 
                               }
                             ?>
-                            <li ><a class="btn btn-success" style="background-color:green;color:black;" target="_blank" href="admin_login_page.php">Admin</a></li>
+                            
+                            <li ><a class="btn btn-success" style="background-color:green;color:black;" target="" href="#">Admin</a></li>
                             
                          </ul>        
                         <a class='menu-trigger'>
@@ -134,6 +135,28 @@ https://templatemo.com/tm-548-training-studio
         </div>
     </div>
     <!-- ***** Main Banner Area End ***** -->
+     <div class="container">
+        <div class="row">
+           <div class="col-lg-6 mt-5">
+               <h4 style=" margin-left:24%;">Sample FIR Format in Hindi </h4>
+               <a href="assets/images/hindi-sample.jpg" style=" margin-left:40%;" target="_blank"><button class="btn btn-info "> View Sample</button></a>
+           
+           </div>
+           <div class="col-lg-6 mt-5">
+               <h4 style=" margin-left:24%;">Sample FIR Format in English </h4>
+               <a href="assets/images/english -sample.jpg" style=" margin-left:40%;" target="_blank"><button class="btn btn-info "> View Sample</button></a>
+           
+           
+           
+           </div>
+        
+        </div>
+     
+     
+     
+     </div>
+
+       
 
     <!-- ***** Features Item Start ***** -->
     <section class="section" id="features">
@@ -143,7 +166,7 @@ https://templatemo.com/tm-548-training-studio
                     <div class="section-heading">
                         <h2>Choose <em>Program</em></h2>
                         <img src="assets/images/line-dec.png" alt="waves">
-                        <p>Training Studio is free CSS template for gyms and fitness centers. You are allowed to use this layout for your business website.</p>
+                        
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -175,7 +198,7 @@ https://templatemo.com/tm-548-training-studio
                             <div class="right-content">
                                 <h4> Check E-FIR status online using E-FIR ID </h4>
                                 <p>Get the current status of the fir lodged by the complainant.</p>
-                                <a href="#" class="text-button">Discover More</a>
+                                <a href="#" style="margin-left:130px;" class="text-button">Discover More</a>
                             </div>
                         </li>
                     </ul>
@@ -189,7 +212,7 @@ https://templatemo.com/tm-548-training-studio
                             <div class="right-content">
                                 <h4> Get support online 24/7 via call center </h4>
                                 <p>Any time support for any queries and emergency response through call</p>
-                                <a href="#" class="text-button">Discover More</a>
+                                <a href="#" style="margin-left:130px;" class="text-button">Discover More</a>
                             </div>
                         </li>
                         <li class="feature-item">
@@ -209,7 +232,7 @@ https://templatemo.com/tm-548-training-studio
                             <div class="right-content">
                                 <h4>Track your progress on investigation</h4>
                                 <p>Track the progress status of the  through the user dasboard</p>
-                                <a href="#" class="text-button">Discover More</a>
+                                <a href="#" style="margin-left:130px;" class="text-button">Discover More</a>
                             </div>
                         </li>
                     </ul>
@@ -394,8 +417,7 @@ https://templatemo.com/tm-548-training-studio
                     <div class="section-heading">
                         <h2>Some Of The <em>Best Police Officer </em></h2>
                         <img src="assets/images/line-dec.png" alt="">
-                        <p>Nunc urna sem, laoreet ut metus id, aliquet consequat magna. Sed viverra ipsum dolor, ultricies fermentum massa consequat eu.</p> 
-
+                        
                     </div>
                 </div>
             </div>
