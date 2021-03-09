@@ -45,36 +45,7 @@ if(!isset($_SESSION['email'])){
 </head> 
 <body>
      
-     <!-- ***** Header Area Start ***** -->
-    <header class="header-area header-sticky"  style="background-color:#313c4b; position:fixed; ">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <nav class="main-nav">
-                        <!-- ***** Logo Start ***** -->
-                        <a href="index.html" class="logo"><img src="./assets/images/mp-police-logo.jpg" height="70px" width="100px" alt=""><em></em></a>
-                        <!-- ***** Logo End ***** -->
-                        <!-- ***** Menu Start ***** -->
-                        <ul class="nav">
-                            <li class="scroll-to-section"><a href="index.php" class="" style="color:white; background-color:#2f3b4b;">Home</a></li>
-                           <!-- <li class="scroll-to-section"><a href="#features" style="color:white; background-color:#2f3b4b;">About</a></li>
-                            <li class="scroll-to-section"><a href="#our-classes" style="color:white;background-color:#2f3b4b;">Classes</a></li>
-                            <li class="scroll-to-section"><a href="#schedule" style="color:white; background-color:#2f3b4b;">Schedules</a></li>
-                        -->
-                            <li class="scroll-to-section"><a href="#contact-us" style="color:white; background-color:#2f3b4b;">Contact</a></li> 
-                           
-                            <li class="main-button"><a href="index.php" data-toggle="modal" data-target="">Logout</a></li>
-                        </ul>        
-                        <a class='menu-trigger'>
-                            <span>Menu</span>
-                        </a>
-                        <!-- ***** Menu End ***** -->
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </header>
-    <!-- ***** Header Area End ***** -->
+    <?php include('include/header_1.php') ?>
     <div style="margin-top:8%;"><marquee style="color:green; font-size:20px;" behavior="" scroll-amount="12" direction="">Note:please fill the appropriate data in the form because it will be legally verfied by government officials,if any inappropiate information found,then the complaint would be rejected with in 24 hours.</marquee></div>
     <div class="col-lg-10  col-xs-12" style="margin-left:10%;">
                 <div class="panel panel-danger">
@@ -277,6 +248,8 @@ if(!isset($_SESSION['email'])){
                            <input type="textarea" name="E_remarks" id="" style="width:1000px;height:100px;"> <br>
 
                             <br> <br>
+                            <input type="checkbox" name="checked" required="true"> 
+                            <p>I hereby to declare that, all the information filled in this form are true to the best of my knowledge if found inappropriate the FIR is liable to be rejected.   </p>
                             
                                                       
                          <center><button class="btn btn-danger" type="submit" name="finalsubmit" style="width:300px; background-color:#ed563b;font-size:30px;">Submit</button></center>  

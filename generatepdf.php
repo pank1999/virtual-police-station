@@ -27,8 +27,9 @@ $con= new mysqli("localhost:3308","root","","virtual_police_station") or die(mys
  
    $row=mysqli_fetch_array($query);
 
- 
-   $html= '<center><h1 style="margin-left:150px;"><u>FIRST INFORMATION REPORT</u></h1><h4 style="margin-left:250px;">(Under section 154 Cr.pc)</h4></center><br> ';
+   $html='<center><img src="assets/images/_stya meviyjayta.jpg" style=" margin-left:280px;height:100px;width:100px;" ></div>';
+  
+   $html.= '<center><h1 style="margin-left:130px;"><u>FIRST INFORMATION REPORT</u></h1><h4 style="margin-left:230px;">(Under section 154 Cr.pc)</h4></center><br> ';
    $html.='<style> .table,th,td{ cell-padding:10px;  width:80%;border:1px solid black; border-collapse:collapse; text-align:left;border-spacing:2px; }  h4{ font-size:20px;} </style>';
 
   $html.= ' <table> ';
@@ -38,7 +39,7 @@ $con= new mysqli("localhost:3308","root","","virtual_police_station") or die(mys
   $html.='<br><br>';
 
   $html.= ' <table> ';
-  $html.= ' <tr> <th>Tahsil</th> <th>Area of occurence </th> <th>Police Station</th> </tr>';
+  $html.= ' <tr> <th>Pincode</th> <th>Area of occurence </th> <th>Police Station</th> </tr>';
   $html.='<tr> <td> '.  $row['pincode']. ' </td> <td> '.  $row['E_place']. ' </td> <td> '.  $row['Police_station']. ' </td> </tr>';
   $html.= '</table>';
   $html.='<br><br>';
@@ -74,7 +75,10 @@ $con= new mysqli("localhost:3308","root","","virtual_police_station") or die(mys
   $html.='<tr> <th>Any suspect:</th> <td><h4>'. $row['E_suspect'] .'</h4></td> </tr>';
   $html.= '</table>';
   $imagename=$row['E_description'];
-  $html.='<div> <h4> 4. EVENT DESCRIPTION </h4> <img src="E_description/'.$imagename.'" style="height:500px;width:700px;" ></div>';
+  $html.='<div> <h4> 4. EVENT DESCRIPTION </h4> <img src="E_description/'.$imagename.'" style="height:auto; width:auto;" ></div>';
+  
+  
+  $html.='<div> <h4 style="margin-left:420px;">Station House Officer</h4> <img src="assets/images/stamp.jpg" style="margin-left:470px; height:100px;width:100px;" ></div>';
   
 
   $mpdf=new \Mpdf\Mpdf();
