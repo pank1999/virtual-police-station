@@ -75,7 +75,8 @@ if(!isset($_SESSION['email'])){
         </div>
     </header>
     <!-- ***** Header Area End ***** -->
-    <div class="col-lg-10  col-xs-12" style="margin-top:100px; margin-left:130px;">
+    <div style="margin-top:8%;"><marquee style="color:green; font-size:20px;" behavior="" scroll-amount="12" direction="">Note:please fill the appropriate data in the form because it will be legally verfied by government officials,if any inappropiate information found,then the complaint would be rejected with in 24 hours.</marquee></div>
+    <div class="col-lg-10  col-xs-12" style="margin-left:10%;">
                 <div class="panel panel-danger">
                     <div class="panel-heading" style="background-color:#ed563b;">
                     

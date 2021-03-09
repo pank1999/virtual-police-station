@@ -154,7 +154,7 @@ https://templatemo.com/tm-548-training-studio
                             </div>
                             <div class="right-content">
                                 <h4>Lodge E-FIR</h4>
-                                <p>Please do not re-distribute this template ZIP file on any template collection website. This is not allowed.</p>
+                                <p>This process consists of 3 stages i.e. complainant's detail, witness's detail,and event's description. </p>
                                 <a href="#" class="text-button">Discover More</a>
                             </div>
                         </li>
@@ -164,7 +164,7 @@ https://templatemo.com/tm-548-training-studio
                             </div>
                             <div class="right-content">
                                 <h4>Check all details of E-FIR</h4>
-                                <p>If you wish to support TemplateMo website via PayPal, please feel free to contact us. We appreciate it a lot.</p>
+                                <p>You can check the information that you have filled in the form in this section.</p>
                                 <a href="#" class="text-button">Discover More</a>
                             </div>
                         </li>
@@ -174,7 +174,7 @@ https://templatemo.com/tm-548-training-studio
                             </div>
                             <div class="right-content">
                                 <h4> Check E-FIR status online using E-FIR ID </h4>
-                                <p>Credit goes to <a rel="nofollow" href="https://www.pexels.com" target="_blank">Pexels website</a> for images and video background used in this HTML template.</p>
+                                <p>Get the current status of the fir lodged by the complainant.</p>
                                 <a href="#" class="text-button">Discover More</a>
                             </div>
                         </li>
@@ -188,7 +188,7 @@ https://templatemo.com/tm-548-training-studio
                             </div>
                             <div class="right-content">
                                 <h4> Get support online 24/7 via call center </h4>
-                                <p>You may want to browse through <a rel="nofollow" href="https://templatemo.com/tag/digital-marketing" target="_parent">Digital Marketing</a> or <a href="https://templatemo.com/tag/corporate">Corporate</a> HTML CSS templates on our website.</p>
+                                <p>Any time support for any queries and emergency response through call</p>
                                 <a href="#" class="text-button">Discover More</a>
                             </div>
                         </li>
@@ -198,7 +198,7 @@ https://templatemo.com/tm-548-training-studio
                             </div>
                             <div class="right-content">
                                 <h4> Get copy of E-FIR </h4>
-                                <p>This template is built on Bootstrap v4.3.1 framework. It is easy to adapt the columns and sections.</p>
+                                <p>Get fir receipt with all the details mentioned while filling the form.</p>
                                 <a href="#" class="text-button">Discover More</a>
                             </div>
                         </li>
@@ -208,7 +208,7 @@ https://templatemo.com/tm-548-training-studio
                             </div>
                             <div class="right-content">
                                 <h4>Track your progress on investigation</h4>
-                                <p>Suspendisse fringilla et nisi et mattis. Curabitur sed finibus nisi. Integer nibh sapien, vehicula et auctor.</p>
+                                <p>Track the progress status of the  through the user dasboard</p>
                                 <a href="#" class="text-button">Discover More</a>
                             </div>
                         </li>
@@ -245,7 +245,6 @@ https://templatemo.com/tm-548-training-studio
                     <div class="section-heading">
                         <h2>Our <em>Classes</em></h2>
                         <img src="assets/images/line-dec.png" alt="">
-                        <p>Nunc urna sem, laoreet ut metus id, aliquet consequat magna. Sed viverra ipsum dolor, ultricies fermentum massa consequat eu.</p>
                     </div>
                 </div>
             </div>
