@@ -36,7 +36,10 @@ if(!isset($_SESSION['email'])){
         display:inline-flex;
     
      }
-
+    .r:after{
+        content:"  *";
+        color:red;
+    }
     
     
     </style>
@@ -60,40 +63,40 @@ if(!isset($_SESSION['email'])){
                        <p class="text-warning"></p>
                        <form   method="POST" role="form" action="firscript.php" enctype="multipart/form-data">
                             <center><h2>Complainant Details</h2></center>    
-                            <label for="">Name of the complainant</label> <br>
+                            <label for=""  class="r" >Name of the complainant</label> <br>
 
                             <div class="form-group">
                                 <input type="text" name="C_name" class="form-control" placeholder="Full Name" required="true" >
                                  
                             </div>
-                            <label for="">Complainant's  District</label> <br>
+                            <label for="" class="r">Complainant's  District</label> <br>
                             <div class="form-group">
                                 <input type="text" name="C_district" class="form-control" placeholder="eg. satna"  required="true" >
                                  
                             </div>
-                            <label for=""> complainant's Father Name</label> <br>
+                            <label for="" class="r"> complainant's Father Name</label> <br>
                             <div class="form-group">
                                 <input type="text" name="C_fathername" class="form-control" placeholder="Full Name" required="true"   >
                                  
                             </div>
-                            <label for="">Address of complainant</label> <br>
+                            <label for="" class="r">Address of complainant</label> <br>
                             <div class="form-group">
                                 <input type="text" name="C_address" class="form-control" placeholder="address" required="true" >
                                  
                             </div>
-                            <label for="">Moblie number</label> <br>
+                            <label class="r" for="">Moblie number</label> <br>
                             <input type="text" name="C_mobileno" value="" class="form-control" placeholder="+91 xxxxxxxxxx" >
                                  
 
                             
 
-                            <label for="">Aadhar card number</label>
+                            <label for="" class="r">Aadhar card number</label>
 
                             <div class="form-group">
                                 <input type="text" name="Aadhar_id" class="form-control" placeholder="Aadhar card number" required="true"  pattern=".{12}" >
                                  
                            </div>
-                            <label for="">Valid ID Proof copy with self attested</label>
+                            <label class="r" for="">Valid ID Proof copy with self attested</label>
 
                             <div class="form-group">
                                 <input type="file" name="C_Id_proof" class="form-control" required="true"  placeholder="Aadhar card/voter id card/passport/pan card/driving licence"  >
@@ -141,12 +144,12 @@ if(!isset($_SESSION['email'])){
                            </div>
                            <hr style="height:3px; background-color:#ed563b;">
                            <center><h2>Event Details</h2></center>
-                           <label>FIR TYPE</label> <br>
+                           <label class="r">FIR TYPE</label> <br>
                             <div class="form-group">
                                 <input type="text" name="FIR_TYPE" class="form-control" placeholder="" required="true" >
                                  
                             </div>
-                             <label for="cars">select place of crime</label>
+                             <label class="r"for="cars">select place of crime</label>
                                 <div  class="form-group">
                                   <select name="cars" id="cars" onclick="F1();" style="height:40px; width:500px;" required="true" >
                                          <option value=""  id="0">select Area</option>
@@ -172,13 +175,13 @@ if(!isset($_SESSION['email'])){
                                   </script>
 
                                 </div>  
-                                <label for="cars">Enter Pincode</label>
+                                <label  class="r" for="cars">Enter Pincode</label>
                                 <div  class="form-group">
                                     <input type="number" name="pincode" placeholder="eg 485002" required="true"  >
                                 </div> 
 
 
-                            <label for="cars">select police station</label>
+                            <label class="r" for="cars">select police station</label>
                                 <div  class="form-group">
                                   <select name="Police_station" id="cars" style="height:40px; width:500px;">
                                          <option value="city police station">city police station</option>
@@ -209,29 +212,29 @@ if(!isset($_SESSION['email'])){
                                 </div>  
                                
 
-                           <label for="">Place of Occurrence</label> <br>
+                           <label for="" class="r">Place of Occurrence</label> <br>
                             <div class="form-group">
                                 <input type="text" name="E_place" class="form-control" style="height:50px; "  required="true" placeholder="Address">
                                  
                             </div>
-                            <label for="">Date of Occurrence</label> <br>
+                            <label for="" class="r">Date of Occurrence</label> <br>
                             <div class="form-group">
                                 <input type="Date" name="E_date" class="form-control" style="height:30px; width:500px;" required="true"  placeholder="DD/MM/YYYY" >
                                  
                             </div>
-                            <label for="">Time of Occurrence</label> <br>
+                            <label for="" class="r">Time of Occurrence</label> <br>
                             <div class="form-group">
                                 <input type="time" name="E_time" class="form-control" style="height:30px; width:500px;" required="true"  placeholder="DD/MM/YYYY" >
                                  
                             </div>
-                            <label for="">Any suspect</label>
+                            <label for="" class="r">Any suspect</label>
                             <div class="form-group">
                         
                                   <input type="radio" name="E_suspect" id="suspect" value="Yes"> Yes
                                   <input type="radio" name="E_suspect" id="suspect" value="No"> No
                                 
                             </div>
-                            <label for="">Event Discription in the form of formal letter </label>
+                            <label class="r" for="">Event Discription in the form of formal letter </label>
                             <p>Note: letter should contains all event  details in chronological order with legal signature containing date and time. </p>
                             <div class="form-group">
                                 <input type="file" name="E_description" class="form-control" placeholder="" required="true"  >
@@ -248,7 +251,7 @@ if(!isset($_SESSION['email'])){
                            <input type="textarea" name="E_remarks" id="" style="width:1000px;height:100px;"> <br>
 
                             <br> <br>
-                            <input type="checkbox" name="checked" required="true"> 
+                            <input  type="checkbox" name="checked" required="true"> 
                             <p>I hereby to declare that, all the information filled in this form are true to the best of my knowledge if found inappropriate the FIR is liable to be rejected.   </p>
                             
                                                       
@@ -263,9 +266,13 @@ if(!isset($_SESSION['email'])){
 
 
                 </div>
+                
 
 
             </div>
+
+
+            
     
 </body>
 </html>

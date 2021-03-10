@@ -101,7 +101,7 @@ https://templatemo.com/tm-548-training-studio
                               }
                             ?>
                             
-                            <li ><a class="btn btn-success" style="background-color:green;color:black;" target="_blank" href="admin_login_page.php">Admin</a></li>
+                            <li ><a class="btn btn-success" style="background-color:green;color:white;" target="_blank" href="admin_login_page.php">Admin</a></li>
                             
                          </ul>        
                         <a class='menu-trigger'>

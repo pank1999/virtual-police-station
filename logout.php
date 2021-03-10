@@ -9,8 +9,9 @@ if(isset($_SESSION['email'])){
     header('location:index.php');
 }
 else if(isset($_SESSION['user_name'])){
-   session_destroy();
+    session_destroy();
     header('location:index.php');
 }
+
 
 ?>

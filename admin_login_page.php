@@ -29,7 +29,7 @@
                                  
                            </div>
                            <div class="form-group" >
-                               <input type="text" name="password" class="form-control" placeholder="Password" required="true" pattern="{6,}">
+                               <input type="password" name="password" class="form-control" placeholder="Password" required="true" pattern="{6,}">
                                
                            </div>
                            <button class="btn" style="background-color:#ed563b; color:white;" type="submit">Login</button>
@@ -51,6 +51,8 @@
         </div>
 
     </div>
+
+ 
 
 
 </body>
