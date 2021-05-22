@@ -37,8 +37,9 @@
                          <button class="btn first_box" type="button" onclick="sendOTP()"  style="background-color:#232d39;color:white;" onclick="sendOtp()">SEND OTP</button>
 
                          <input type="text" id="otp" class="form-control  second_box" style="visibility:none;" placeholder="OTP"> <br> <br>
-                         <button class="btn btn-success second_box" type="button" onclick="submitOTP()">Submit OTP</button>
-                          <!--<span id="otp_error" style="color:red;">Enter valid OTP</span>--> 
+                         <span id="otp_error" style="color:red;"></span> 
+                         <button class="btn btn-success second_box" onclick="submitOTP()" type="button">Submit OTP</button>
+                          
                   </form>
               </div>
               <div class="panel-footer">
@@ -81,6 +82,31 @@
             // doument.querySelector("button").textContent="Verify OTP";
 
          });
+         }
+
+
+
+         function submitOTP()
+         {
+          var otp=jQuery('#otp').val();
+             jQuery.ajax({
+              url:'verifyotp.php',
+              type:'post',
+              data:'otp='+otp,
+              success:function(result){
+                   if(result=="yes"){
+                     window.location="firform.php";
+                   }
+                   if(result=="no"){
+                         jQuery("#otp_error").html("please enter valid otp");
+                   }
+              }
+            // document.getElementById("Aadhar").style.visibility="hidden";
+            // doument.querySelector("button").textContent="Verify OTP";
+
+         });
+                  
+
          }
       
       
