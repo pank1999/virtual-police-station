@@ -1,5 +1,5 @@
 <?php 
-       
+      session_start();
              // if(isset($_SESSION['photosubmit'])){
   
              // echo"<script>alert('successfully submitted');</script>";

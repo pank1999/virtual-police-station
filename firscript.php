@@ -14,6 +14,9 @@ if(isset($_POST['finalsubmit'])){
   $Aadhar_id= mysqli_real_escape_string($con,$_POST['Aadhar_id']);
   $C_Id_proof =  $_FILES['C_Id_proof'];
 
+   //creating aadhar session
+  $_SESSION['aadhar']=$_POST['Aadhar_id'];
+
 
   $file_name1=$C_Id_proof['name'];
   $file_error1=$C_Id_proof['error'];

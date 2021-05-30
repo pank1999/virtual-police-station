@@ -23,10 +23,10 @@
       <?php include('include/header_1.php'); ?>
       <div class="container " style="margin-top:10%">
       <h2 style="text-decoration:underline;" >User Authentication Via</h2>
-      <h3>OR</h3>
+      <h3></h3>
           <div class="row">
             
-            <div class="col-lg-6 panel">
+            <div class="col-lg-12 panel">
               <div class="panel-heading" style="background-color:#ed563b; color:white;">
                 <h2>Email Id</h2> 
               </div>
@@ -45,9 +45,9 @@
               <div class="panel-footer">
               </div>
             </div> 
-              
+           <!--   
             <div class="col-lg-6 panel">
-            <div class="panel-heading" style="background-color:#ed563b; color:white;">
+              <div class="panel-heading" style="background-color:#ed563b; color:white;">
                 <h2> Mobile Number</h2> 
               </div>
               <div class="panel-body">
@@ -60,7 +60,7 @@
               <div class="panel-footer">
               </div>
                                  
-            </div> 
+            </div> -->
           </div>
       </div>   
 
