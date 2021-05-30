@@ -2,6 +2,7 @@
 
 
 <?php
+session_start();
 
 $con= new mysqli("localhost:3308","root","","virtual_police_station") or die(mysqli_error($con));
 if(isset($_POST['finalsubmit'])){
@@ -15,7 +16,7 @@ if(isset($_POST['finalsubmit'])){
   $C_Id_proof =  $_FILES['C_Id_proof'];
 
    //creating aadhar session
-  $_SESSION['aadhar']=$_POST['Aadhar_id'];
+  $_SESSION['aadhar']=$Aadhar_id;
 
 
   $file_name1=$C_Id_proof['name'];
