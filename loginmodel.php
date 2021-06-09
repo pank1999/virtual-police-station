@@ -15,8 +15,8 @@
               <input type="email" class="form-control" name="email" placeholder="Email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-z]{2,3}$"  required >
             </div>
             <div class="form-group">
-              <label for="password"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
-              <input type="password" class="form-control" name="password" placeholder="Password "   required >
+              <label for="password"><span class="glyphicon glyphicon-eye-open"></span>Aadhar Id</label>
+              <input type="number" class="form-control" name="password" placeholder="Aadhar ID"   required >
             </div>
            
            <button type="submit" class="btn  btn-success"><span class="glyphicon glyphicon-off"></span> Login</button>

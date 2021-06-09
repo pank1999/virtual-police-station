@@ -79,14 +79,16 @@ move_uploaded_file($file_tmp3,$destination_file3);
     $insertquery2="INSERT INTO witness_details(W_name,W_district,W_fathername,W_address,W_mobileno,W_Id_proof) VALUES('$W_full_name','$W_district','$W_fathername','$W_address','$W_mobileno','$file_name3')" ;
     
     $insertquery3="INSERT INTO event_details(FIR_TYPE , pincode ,Police_station,E_place,E_date,Aadhar_id,E_suspect,E_description,E_anyproof,E_remarks,E_time) VALUES('$FIR_TYPE','$pincode','$police_station','$E_place','$E_date','$Aadhar_id','$E_suspect','$file_name2','$file_name4','$E_remark' ,CURRENT_TIMESTAMP())";
-   
-    
-
+     
+    $updatequery="UPDATE `user` set Aadhar_Id=$_SESSION['aadhar'] WHERE email='$email' ";
+     
+     mysqli_query($con,$updatequery)or die(mysqli_error($con));
    $queryrun1=mysqli_query($con,$insertquery1) or die (mysqli_error(($con)));
 
    $queryrun2=mysqli_query($con,$insertquery2) or die(mysqli_error(($con)));
 
    $queryrun3=mysqli_query($con,$insertquery3) or die(mysqli_error(($con)));
+
     
 
    

@@ -2,14 +2,14 @@
 
 $con= new mysqli("localhost:3308","root","","virtual_police_station") or die(mysqli_error($con));
 
-
+session_start();
 
 
 $email =  mysqli_real_escape_string($con,$_POST['email']);
 $password = mysqli_real_escape_string($con,$_POST['password']);
 //$password = md5($password);
 
-$select_query ="SELECT id ,email, password FROM user_info WHERE  email ='$email'"
+$select_query ="SELECT email, Aadhar_Id FROM user WHERE  email ='$email' and Aadhar_id='$password'"
   or die(mysqli_error($con));
 
 $select_query_result = mysqli_query($con,$select_query)
@@ -25,7 +25,7 @@ echo "<script>location.href = 'index.php'</script>";
 
 }
 
-$pass = "SELECT * from user_info where email = '$email'";
+$pass = "SELECT * from user where email = '$email'";
 
 $pass_result = mysqli_query($con,$pass)
   or die(mysqli_error($con));
@@ -36,7 +36,7 @@ $pass_com = mysqli_fetch_array($pass_result)
 
 
 
- if( $pass_com['password'] !== $password){
+ if( $pass_com['Aadhar_Id'] !== $password){
     
 echo "<script>alert('Incorrect password! retry')</script>";
 echo "<script>location.href = 'index.php'</script>";   
@@ -47,10 +47,10 @@ else {
  
   session_start();
    $_SESSION['email'] = $email;
-  $_SESSION['u_id'] = $pass_com['id'];
-  $_SESSION['first_name'] =$pass_com['first_name'];
-  $_SESSION['last_name']=$pass_com['last_name'];
-  $_SESSION['aadhar']=$pass_com['Aadhar_id'];
+//  $_SESSION['u_id'] = $pass_com['id'];
+  // $_SESSION['first_name'] =$pass_com['first_name'];
+  // $_SESSION['last_name']=$pass_com['last_name'];
+  $_SESSION['aadhar']=$pass_com['Aadhar_Id'];
 
 
  //echo $_SESSION['email'];
