@@ -71,9 +71,10 @@
              jQuery.ajax({
               url:"sendotp.php",
               type:'post',
-              data:'email='+email,
+              data:'email='+email, 
               success:function(result){
                    if(result=="yes"){
+                     
                      jQuery('.second_box').show();
                      jQuery('.first_box').hide();
                    }
@@ -95,6 +96,9 @@
               data:'otp='+otp,
               success:function(result){
                    if(result=="yes"){
+                    <?php
+                     session_start();
+                    $_SESSION['email']=$_GET['email'] ; ?>
                      window.location="firform.php";
                    }
                    if(result=="no"){

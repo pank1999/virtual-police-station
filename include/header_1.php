@@ -16,7 +16,7 @@
                             <li class="scroll-to-section"><a href="#schedule" style="color:white;">Schedules</a></li>
                             <li class="scroll-to-section"><a href="#contact-us" style="color:white;">Contact</a></li> 
                           -->
-                            <li class="main-button"><a href="logout.php" data-toggle="modal" data-target="">login</a></li>
+                            <li class="main-button"><a href="logout.php" data-toggle="modal" data-target="">logout</a></li>
                         </ul>        
                         <a class='menu-trigger'>
                             <span>Menu</span>

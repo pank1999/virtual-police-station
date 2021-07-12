@@ -146,12 +146,58 @@ if(!isset($_SESSION['email'])){
                            <center><h2>Event Details</h2></center>
                            <label class="r">FIR TYPE</label> <br>
                             <div class="form-group">
-                                <input type="text" name="FIR_TYPE" class="form-control" placeholder="" required="true" >
-                                 
+                                <select name="FIR_TYPE" class="form-control" id="">
+                                
+                                      <option value="">select</option>
+                                      <option value="Burglary">Burglary</option>
+                                      <option value="Robbery">Robbery</option>
+                                      <option value="Assault">Assault</option>
+                                      <option value="cybercrime">cybercrime</option>
+                                      <option value="Domestic voilence">Domestic voilence</option>
+                                      <option value="other">other</option>
+                                </select>
+                            </div>   
+                                
+                                <div class="form-group">
+                                <label class="r">Select State</label> 
+                                <select name="state" class="form-control" id="">
+                                
+                                      <option value="">select state</option>
+                                      <option value="Burglary">Andhra Pradesh</option>
+                                      <option value="Robbery">Arunachal Pradesh</option>
+                                      <option value="Assault">Assam</option>
+                                      <option value="cybercrime">Bihar</option>
+                                      <option value="Chhattisgarh">Chhattisgarh</option>
+                                      <option value="Goa">Goa</option>
+                                      <option value="Gujarat">Gujarat</option>
+                                      <option value="Haryana">Haryana</option>
+                                      <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                      <option value="Jharkhand">Jharkhand</option>
+                                      <option value="Karnataka">Karnataka</option>
+                                      <option value="Kerala">Kerala</option>
+                                      <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                      <option value="Maharashtra">Maharashtra</option>
+                                      <option value="Manipur">Manipur</option>
+                                      <option value="Meghalaya">Meghalaya</option>
+                                      <option value="Mizoram">Mizoram</option>
+                                      <option value="Nagaland">Nagaland</option>
+                                      <option value="Odisha">Odisha</option>
+                                      <option value="Punjab">Punjab</option>
+                                      <option value="Rajasthan">Rajasthan</option>
+                                      <option value="Sikkim">Sikkim</option>
+                                      <option value="Tamil Nadu">Tamil Nadu</option>
+                                      <option value="Telangana">Telangana</option>
+                                      <option value="Tripura">Tripura</option>
+                                      <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                      <option value="Uttarakhand">Uttarakhand</option>
+                                      <option value="West Bengal">West Bengal</option>
+                                      
+                                </select>
+                              
                             </div>
                              <label class="r"for="cars">select place of crime</label>
                                 <div  class="form-group">
-                                  <select name="cars" id="cars" onclick="F1();" style="height:40px; width:500px;" required="true" >
+                                  <select name="cars"  class="form-control" id="cars" onclick="F1();" style="height:40px; " required="true" >
                                          <option value=""  id="0">select Area</option>
                                          <option value="Maihar Police station"  id="1">Maihar</option>
                                          <option value="satna Police station" id="2">satna</option>
@@ -177,13 +223,13 @@ if(!isset($_SESSION['email'])){
                                 </div>  
                                 <label  class="r" for="cars">Enter Pincode</label>
                                 <div  class="form-group">
-                                    <input type="number" name="pincode" placeholder="eg 485002" required="true"  >
+                                    <input type="number"  class="form-control" name="pincode" placeholder="eg 485002" required="true"  >
                                 </div> 
 
 
                             <label class="r" for="cars">select police station</label>
                                 <div  class="form-group">
-                                  <select name="Police_station" id="cars" style="height:40px; width:500px;">
+                                  <select  class="form-control" name="Police_station" id="cars" style="height:40px; ">
                                          <option value="city police station">city police station</option>
                                          <option value="Maihar police station">Maihar police station</option>
                                           <option value="Nagod police station">Nagod police station</option>
@@ -248,7 +294,7 @@ if(!isset($_SESSION['email'])){
                            </div>
 
                            <label for="">Any remarks</label> <br>
-                           <input type="textarea" name="E_remarks" id="" style="width:1000px;height:100px;"> <br>
+                           <input type="textarea" class="form-control" name="E_remarks" id="" style="width:1000px;height:100px;"> <br>
 
                             <br> <br>
                             <input  type="checkbox" name="checked" required="true"> 

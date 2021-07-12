@@ -84,7 +84,7 @@ $run1=mysqli_query($con,$query1) or die(mysqli_error($query1));
         <center><h2><u>User Dashboard</u></h2></center>
         <div class="container-fluid row">
              <div class="col-xs-6">
-              <h3 style="color:rgb(223, 70, 9);">Welcome:<?php // echo $_SESSION['first_name'];echo  $_SESSION['last_name'] ;?></h3>
+              <h3 style="color: rgb(243, 103, 21);">Welcome:<?php echo $_SESSION['email'];?></h3>
              </div>
              <div class="col-xs-6">
             <h3 style="float:right;">

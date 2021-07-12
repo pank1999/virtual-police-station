@@ -32,6 +32,20 @@ https://templatemo.com/tm-548-training-studio
 
     <link rel="stylesheet" href="assets/css/templatemo-training-studio.css">
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+     
+   <style>
+     .hindi{
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        border-radius:20px;
+     }
+     .english{
+         margin-left:150px;
+         border-radius:20px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+     }
+    
+   </style>
+
 
     </head>
     
@@ -137,15 +151,15 @@ https://templatemo.com/tm-548-training-studio
     <!-- ***** Main Banner Area End ***** -->
      <div class="container">
         <div class="row">
-           <div class="col-lg-6 mt-5">
-               <h4 style=" margin-left:24%; color:#ed563b;">Sample FIR Format in Hindi </h4> <br>
-               <a href="assets/images/hindi-sample.jpg" style=" margin-left:40%;" target="_blank"><button class="btn btn-info "> View Sample</button></a>
-           
+           <div class="col-lg-5  hindi mt-5">
+              <center><h4 style="color:#ed563b;">Sample FIR Format in Hindi </h4> <br>
+               <a href="assets/images/hindi-sample.jpg"  target="_blank"><button class="btn btn-info "> View Sample</button></a>
+               </center> 
            </div>
-           <div class="col-lg-6 mt-5">
-               <h4 style=" margin-left:24%; color:#ed563b;">Sample FIR Format in English </h4> <br>
-               <a href="assets/images/english -sample.jpg" style=" margin-left:40%;" target="_blank"><button class="btn btn-info "> View Sample</button></a>
-           
+           <div class="col-lg-5 english mt-5">
+              <center><h4 style=" color:#ed563b;">Sample FIR Format in English </h4> <br>
+               <a href="assets/images/english -sample.jpg"  target="_blank"><button class="btn btn-info "> View Sample</button></a>
+               </center> 
            
            
            </div>
