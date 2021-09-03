@@ -33,8 +33,8 @@
               <div class="panel-body">
                   <form class="form-group" action="" method="get">
               
-                         <input type="text" id="email" name="email" class="form-control  first_box" style="visibility:none;" placeholder="Email ID"> <br> <br>
-                         <button class="btn first_box" type="button" onclick="sendOTP()"  style="background-color:#232d39;color:white;" onclick="sendOtp()">SEND OTP</button>
+                         <input type="email" id="email" name="email" class="form-control  first_box" style="visibility:none;" required="true" placeholder="Email ID"> <br> <br>
+                         <button class="btn first_box" type="button"   style="background-color:#232d39;color:white;" onclick="sendOTP()">SEND OTP</button>
 
                          <input type="text" id="otp" class="form-control  second_box" style="visibility:none;" placeholder="OTP"> <br> <br>
                          <span id="otp_error" style="color:red;"></span> 

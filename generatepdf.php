@@ -29,7 +29,7 @@ $con= new mysqli("localhost:3308","root","","virtual_police_station") or die(mys
 
    $html='<center><img src="assets/images/_stya meviyjayta.jpg" style=" margin-left:280px;height:100px;width:100px;" ></div>';
   
-   $html.= '<center><h1 style="margin-left:130px;"><u>FIRST INFORMATION REPORT</u></h1><h4 style="margin-left:230px;">(Under section 154 Cr.pc)</h4></center><br> ';
+   $html.= '<center><h1 style="margin-left:130px;"><u>FIRST INFORMATION REPORT</u></h1><h4 style="margin-left:230px;">(Under section XXX Cr.pc)</h4></center><br> ';
    $html.='<style> .table,th,td{ cell-padding:10px;  width:80%;border:1px solid black; border-collapse:collapse; text-align:left;border-spacing:2px; }  h4{ font-size:20px;} </style>';
 
   $html.= ' <table> ';

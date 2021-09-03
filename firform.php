@@ -9,9 +9,6 @@ if(!isset($_SESSION['email'])){
 
 //$query1="SELECT * FROM event_details";
 ///$run1=mysqli_query($con,$query1) or die(mysqli_error($query1));
-
-
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -40,8 +37,55 @@ if(!isset($_SESSION['email'])){
         content:"  *";
         color:red;
     }
+    .form-box{
+        margin-left:12%;
+        width:80%;
+        
+    }
+    .text-area{
+        width:100%;
+        height:100px;
+    }
+    input[type="text"]{
+        box-shadow: 0 0 5pt 0.5pt #d3d3d3;
+        border-radius:10px;
+        height:40px;
+    }
+    input[type="time"]{
+        box-shadow: 0 0 5pt 0.5pt #d3d3d3;
+        border-radius:20px;
+        width:30%;
+    }
+    input[type="Date"]{
+        box-shadow: 0 0 5pt 0.5pt #d3d3d3;
+        border-radius:20px;
+        width:30%;
+    }
+    input[type="textarea"]{
+        box-shadow: 0 0 5pt 0.5pt #d3d3d3;
+        border-radius:10px;
+        
+    }
+    input[type="file"]{
+        box-shadow: 0 0 5pt 0.5pt #d3d3d3;
+        border-radius:10px;
+        height:40px;
+        
+    }
+
+    
+    @media  only screen AND (max-width:720px){
+        .form-box{
+        margin-left:0%;
+        margin-top:5%;
+    }
+    .text-area{
+        width:100%;
+        height:100px;
+    }
     
     
+    }
     </style>
 
     
@@ -50,7 +94,7 @@ if(!isset($_SESSION['email'])){
      
     <?php include('include/header_1.php') ?>
     <div style="margin-top:8%;"><marquee style="color:green; font-size:20px;" behavior="" scroll-amount="12" direction="">Note:please fill the appropriate data in the form because it will be legally verfied by government officials,if any inappropiate information found,then the complaint would be rejected with in 24 hours.</marquee></div>
-    <div class="col-lg-10  col-xs-12" style="margin-left:10%;">
+    <div class="col-10  col-12 form-box">
                 <div class="panel panel-danger">
                     <div class="panel-heading" style="background-color:#ed563b;">
                     
@@ -146,7 +190,7 @@ if(!isset($_SESSION['email'])){
                            <center><h2>Event Details</h2></center>
                            <label class="r">FIR TYPE</label> <br>
                             <div class="form-group">
-                                <select name="FIR_TYPE" class="form-control" id="">
+                                <select name="FIR_TYPE" onclick="Firtype()" class="form-control" id="fir">
                                 
                                       <option value="">select</option>
                                       <option value="Burglary">Burglary</option>
@@ -156,6 +200,28 @@ if(!isset($_SESSION['email'])){
                                       <option value="Domestic voilence">Domestic voilence</option>
                                       <option value="other">other</option>
                                 </select>
+                                <input type="text" id="other" placeholder="Enter FIR Type" name="FIR_TYPE" class="form-control" style="visibility:hidden;position:absolute; margin-top:10px;">
+                                <script>
+
+                                         function Firtype(){
+                                                var x = document.getElementById('fir').value; 
+                                                if(x=="other"){
+                                                    document.getElementById('other').style.visibility="visible";
+                                                    document.getElementById('other').style.position="relative";
+                                                }
+                                                else{
+                                                    document.getElementById('other').style.visibility="hidden";
+                                                    document.getElementById('other').style.position="absolute";
+                                                }
+                                                   
+                                                
+                                               
+
+                                         }
+
+
+</script>
+                                
                             </div>   
                                 
                                 <div class="form-group">
@@ -195,9 +261,11 @@ if(!isset($_SESSION['email'])){
                                 </select>
                               
                             </div>
-                             <label class="r"for="cars">select place of crime</label>
+                             <label class="r"for="cars">Enter place of crime</label>
                                 <div  class="form-group">
-                                  <select name="cars"  class="form-control" id="cars" onclick="F1();" style="height:40px; " required="true" >
+                                    <input type="text" placeholder="Enter Place Of Crime" name="cars" id="" class="form-control">
+                                    <!--
+                                  <select name="cars"   id="cars" onclick="F1();" style="height:40px; " required="true" >
                                          <option value=""  id="0">select Area</option>
                                          <option value="Maihar Police station"  id="1">Maihar</option>
                                          <option value="satna Police station" id="2">satna</option>
@@ -208,7 +276,7 @@ if(!isset($_SESSION['email'])){
                                          <option value="Dhankher Police station" id="7">Dhankher</option>
                                          <option value="Jaitwara Police station" id="8">Jaitwara</option>
                                   </select> <label id="police_station" style="color:green;"></label>
-
+                                     -->
                                   <script>
 
                                       function F1(){
@@ -265,23 +333,45 @@ if(!isset($_SESSION['email'])){
                             </div>
                             <label for="" class="r">Date of Occurrence</label> <br>
                             <div class="form-group">
-                                <input type="Date" name="E_date" class="form-control" style="height:30px; width:500px;" required="true"  placeholder="DD/MM/YYYY" >
+                                <input type="Date" name="E_date" class="form-control" style="height:30px;" required="true"  placeholder="DD/MM/YYYY" >
                                  
                             </div>
                             <label for="" class="r">Time of Occurrence</label> <br>
                             <div class="form-group">
-                                <input type="time" name="E_time" class="form-control" style="height:30px; width:500px;" required="true"  placeholder="DD/MM/YYYY" >
+                                <input type="time" name="E_time" class="form-control" style="height:30px; " required="true"  placeholder="DD/MM/YYYY" >
                                  
                             </div>
                             <label for="" class="r">Any suspect</label>
                             <div class="form-group">
                         
-                                  <input type="radio" name="E_suspect" id="suspect" value="Yes"> Yes
-                                  <input type="radio" name="E_suspect" id="suspect" value="No"> No
+                                  <input type="radio"  onclick="s1()"  id="suspect" value="Yes"> Yes
+                                  <input type="radio" name="E_suspect" id="suspect-n" value="No"> No
+                                  <input type="text" placeholder="Enter Suspect Description " class="form-control" name="E_suspect" id="suspect-t" style="visibility:hidden;position:absolute;">
                                 
                             </div>
+                            <script>
+
+                                      function s1(){
+                                          var x = document.getElementById('suspect').value;
+                                          if(x=="Yes"){
+                                            document.getElementById('suspect-t').style.visibility="visible";
+                                          document.getElementById('suspect-t').style.position="relative";
+
+ 
+                                          }
+                                          else{
+                                            document.getElementById('suspect-t').style.visibility="hidden";
+                                          document.getElementById('suspect-t').style.position="absolute";
+ 
+                                          }
+                                         
+                                        }
+
+
+                                  </script>
+                            
                             <label class="r" for="">Event Discription in the form of formal letter </label>
-                            <p>Note: letter should contains all event  details in chronological order with legal signature containing date and time. </p>
+                            <p style="color:red;">Note: letter should contains all event  details in chronological order with legal signature containing date and time.Check The Sample format in home page. </p>
                             <div class="form-group">
                                 <input type="file" name="E_description" class="form-control" placeholder="" required="true"  >
                                  
@@ -294,12 +384,12 @@ if(!isset($_SESSION['email'])){
                            </div>
 
                            <label for="">Any remarks</label> <br>
-                           <input type="textarea" class="form-control" name="E_remarks" id="" style="width:1000px;height:100px;"> <br>
+                           <input type="textarea" class="form-control text-area" name="E_remarks" id="" style=""> <br>
 
                             <br> <br>
-                            <input  type="checkbox" name="checked" required="true"> 
-                            <p>I hereby to declare that, all the information filled in this form are true to the best of my knowledge if found inappropriate the FIR is liable to be rejected.   </p>
-                            
+                            <input  type="checkbox" name="checked" required="true">
+                            <p style="font-size:18px;color:black; font-weight:bold;">I hereby to declare that, all the information filled in this form are true to the best of my knowledge if found inappropriate the FIR is liable to be rejected.   </p>
+                           
                                                       
                          <center><button class="btn btn-danger" type="submit" name="finalsubmit" style="width:300px; background-color:#ed563b;font-size:30px;">Submit</button></center>  
                        </form>

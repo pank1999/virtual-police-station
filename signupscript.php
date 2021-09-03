@@ -34,7 +34,7 @@ $regex_contact="/^[6789][0-9]{9}$/";
 }
 else if(strlen($Phone_number)<10){
     echo "<script>alert('Please enter a valid phone number.')</script>";
-    // echo"<script>location.href='index.php'</script>";
+    echo"<script>location.href='index.php'</script>";
 }
 /*
 else if(!preg_match($regex_contact,$phone_number)){
@@ -43,7 +43,7 @@ else if(!preg_match($regex_contact,$phone_number)){
      echo"<script>location.href='index.php'</script>";
 }
 */
-   else  {    $user_check = "SELECT email from user_info where email = '$Email' "
+   else  {    $user_check = "SELECT email from user_info where Aadhar_id = '$adhar_id' "
               or die(mysqli_error($con));
 
               $user_check_query = mysqli_query($con,$user_check)
@@ -51,13 +51,13 @@ else if(!preg_match($regex_contact,$phone_number)){
 
 
 
-             // if( mysqli_num_rows($user_check_query )>0){
-              // echo "<script>alert('User with this email already exits!')</script>";
-             // echo "<script>location.href = 'signupmodel.php'</script>";
-              //  }
+              if( mysqli_num_rows($user_check_query )>0){
+                 echo "<script>alert('User with this Aadhar id already exits!')</script>";
+                 echo "<script>location.href = 'index.php'</script>";
+                }
 
  
-             // else {
+             else {
                  $user_reg ="INSERT INTO `user_info` (first_name,last_name,phone_number,ID_proof,Aadhar_id,email,password) VALUES('$First_name','$Last_name','$Phone_number','$file_name',$adhar_id,'$Email','$password')";
 
                  $user_sub = mysqli_query($con,$user_reg)
@@ -83,12 +83,6 @@ else if(!preg_match($regex_contact,$phone_number)){
                   echo "<script>location.href = 'index.php'</script>";
                 }
 
-         // }
+         }
    }
-
-
 ?>
-
-
-
-        

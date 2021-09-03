@@ -47,7 +47,7 @@ move_uploaded_file($file_tmp3,$destination_file3);
   $FIR_TYPE = mysqli_real_escape_string($con,$_POST['FIR_TYPE']);
   $pincode= mysqli_real_escape_string($con,$_POST['pincode']);
   $police_station= mysqli_real_escape_string($con,$_POST['Police_station']);
-
+  $E_state= mysqli_real_escape_string($con,$_POST['state']);
   $E_place = mysqli_real_escape_string($con,$_POST['E_place']);
   $E_date = mysqli_real_escape_string($con,$_POST['E_date']);
   //$E_time =  mysqli_real_escape_string($con,$_POST['E_time']);
@@ -78,7 +78,7 @@ move_uploaded_file($file_tmp3,$destination_file3);
  
     $insertquery2="INSERT INTO witness_details(W_name,W_district,W_fathername,W_address,W_mobileno,W_Id_proof) VALUES('$W_full_name','$W_district','$W_fathername','$W_address','$W_mobileno','$file_name3')" ;
     
-    $insertquery3="INSERT INTO event_details(FIR_TYPE , pincode ,Police_station,E_place,E_date,Aadhar_id,E_suspect,E_description,E_anyproof,E_remarks,E_time) VALUES('$FIR_TYPE','$pincode','$police_station','$E_place','$E_date','$Aadhar_id','$E_suspect','$file_name2','$file_name4','$E_remark' ,CURRENT_TIMESTAMP())";
+    $insertquery3="INSERT INTO event_details(FIR_TYPE , pincode ,Police_station,E_place,E_date,Aadhar_id,E_suspect,E_description,E_anyproof,E_remarks,E_time,E_state) VALUES('$FIR_TYPE','$pincode','$police_station','$E_place','$E_date','$Aadhar_id','$E_suspect','$file_name2','$file_name4','$E_remark' ,CURRENT_TIMESTAMP(),'$E_state')";
      
     $updatequery="UPDATE `user` set Aadhar_Id=$Aadhar_id WHERE email='$email'";
      

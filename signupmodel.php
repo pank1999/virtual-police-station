@@ -14,7 +14,9 @@
       <div class="modal-content">
         <div class="modal-header " style="background-color:#ed563b;">
          <!-- <button type="button" class="close" data-dismiss="modal">&times;</button>-->
-          <h4 style="text-color:red;background-color:#ed563b;"><span class="glyphicon glyphicon-lock"></span>Sign up</h4>
+          <h4 style="text-color:red;background-color:#ed563b;">Sign up</h4> <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
         </div>
         <div class="modal-body">
             <p>Already have an account? <a href="#" data-toggle="modal" data-target="#loginmodel" style="color:#ed563b;">Login</a></p>
@@ -45,8 +47,8 @@
             </div>
             
             <div class="form-group">
-              <label class="r" for="email"><span class="glyphicon glyphicon-user"></span> Email</label>
-              <input type="email" class="form-control" name="email" placeholder="Email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-z]{2,3}$"  required >
+              <label class="" for="email"><span class="glyphicon glyphicon-user"></span> Email</label>
+              <input type="email" class="form-control" name="email" placeholder="Email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-z]{2,3}$"  >
             </div>
             <div class="form-group">
               <label class="r" for="password"><span class="glyphicon glyphicon-eye-open"></span> Password</label>

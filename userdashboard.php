@@ -2,7 +2,7 @@
 
 session_start();
 //include('profile.php');
-if(!isset($_SESSION['email'])){
+if(!isset($_SESSION['aadhar'])){
 
    echo "<script> alert('login first ') </script>";
    echo"<script> location.href='index.php' </script>";    
@@ -60,7 +60,7 @@ $run1=mysqli_query($con,$query1) or die(mysqli_error($query1));
                         <ul class="nav">
                         
                             <li class="scroll-to-section"><a href="index.php" class="" style="color:white; background-color:#2f3b4b;">Home</a></li>
-                            <li class="scroll-to-section"><a href="#" data-toggle="modal" data-target="#profilemodel" style="color:white; background-color:#2f3b4b;">Profile</a></li>
+                            <li class="scroll-to-section"><a href="profile.php"  style="color:white; background-color:#2f3b4b;">Profile</a></li>
                           <!--  <li class="scroll-to-section"><a href="#our-classes" style="color:white;">Classes</a></li>
                             <li class="scroll-to-section"><a href="#schedule" style="color:white;">Schedules</a></li>
                             <li class="scroll-to-section"><a href="#contact-us" style="color:white;">Contact</a></li> 
@@ -84,7 +84,7 @@ $run1=mysqli_query($con,$query1) or die(mysqli_error($query1));
         <center><h2><u>User Dashboard</u></h2></center>
         <div class="container-fluid row">
              <div class="col-xs-6">
-              <h3 style="color: rgb(243, 103, 21);">Welcome:<?php echo $_SESSION['email'];?></h3>
+              <h3 style="color: rgb(243, 103, 21);">Welcome:<?php echo $_SESSION['first_name']; echo " ".$_SESSION['last_name'];?></h3>
              </div>
              <div class="col-xs-6">
             <h3 style="float:right;">

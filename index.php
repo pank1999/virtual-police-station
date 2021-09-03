@@ -1,10 +1,8 @@
 <?php
 session_start();
+
  include('signupmodel.php');
  include('loginmodel.php');
- 
- 
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -32,18 +30,40 @@ https://templatemo.com/tm-548-training-studio
 
     <link rel="stylesheet" href="assets/css/templatemo-training-studio.css">
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-     
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
    <style>
      .hindi{
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        border-radius:20px;
+        border-radius:10px;
+
+     }
+     .hindi h4{
+         margin-top:20px;
      }
      .english{
          margin-left:150px;
-         border-radius:20px;
+         padding-bottom:20px;
+         border-radius:10px;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
      }
-    
+     .english h4{
+        margin-top:20px;
+     }
+      .hindi a{
+          padding-bottom:20px;
+      }
+      .english a{
+        margin-bottom:20px;
+      }
+
+      @media  only screen AND (max-width:720px){
+        .english{
+         margin-left:0px;
+         padding-bottom:20px;
+         border-radius:10px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+     }
+      }
    </style>
 
 
@@ -93,7 +113,9 @@ https://templatemo.com/tm-548-training-studio
                               }
                               else{
                                   ?>
-                                  <li class="main-button"><a href="#" data-toggle="modal" data-target="#signupmodel" style="padding-top:1px;" >Signup</a></li>
+                                  
+                                  <li class="main-button"><a href="#" data-toggle="modal" data-target="#signupmodel" style="padding-top:1px;" >Sign Up</a></li>
+                              
                                 <?php 
                               }
                             ?>
@@ -115,7 +137,7 @@ https://templatemo.com/tm-548-training-studio
                               }
                             ?>
                             
-                            <li ><a class="btn btn-success" style="background-color:green;color:white;" target="_blank" href="admin_login_page.php">Admin</a></li>
+                            <li ><a class="btn btn-success" style="background-color:green;color:white;" target="_blank" href="admin_login_page.php">PS Admin</a></li>
                             
                          </ul>        
                         <a class='menu-trigger'>
@@ -140,12 +162,16 @@ https://templatemo.com/tm-548-training-studio
 
         <div class="video-overlay header-text">
             <div class="caption">
-                <h6>CRIME FREE INDIA</h6>
+                <h6><span style="font-size:25px;">Aawaj</span> <br> <span style="color:orange;">CRIME</span> <span>FREE</span> <span style="color:green;">INDIA</span> </h6>
                 <h2 >Virtual police station <em> <br> VPS</em></h2>
                 <div class="main-button scroll-to-section">
-                    <a href="signUp.php" class="btn btn-success" style="background-color:rgb(8, 99, 15);">File-FIR</a>
+                    <?php if(!isset($_SESSION['email'])){ ?>
+                    <a href="#?f=1" data-toggle="modal" data-target="#loginmodel" class="btn btn-success" style="background-color:rgb(8, 99, 15);">File-FIR</a>
+                    <?php } else {?>
+                        <a href="firform.php"class="btn btn-success" style="background-color:rgb(8, 99, 15);">File-FIR</a>
+                     <?php } ?>
                 </div>
-            </div>S
+            </div>
         </div>
     </div>
     <!-- ***** Main Banner Area End ***** -->
@@ -288,11 +314,11 @@ https://templatemo.com/tm-548-training-studio
             <div class="row" id="tabs">
               <div class="col-lg-4">
                 <ul>
-                  <li><a href='#tabs-1'><img src="assets/images/tabs-first-icon.png" alt="">Virtual Police Station</a></li>
-                  <li><a href='#tabs-2'><img src="assets/images/tabs-first-icon.png" alt="">Online FIR</a></a></li>
-                  <li><a href='#tabs-3'><img src="assets/images/tabs-first-icon.png" alt="">Fast Investigation</a></a></li>
+                  <li><a href='#tabs-1'><img src="" alt="">Virtual Police Station</a></li>
+                  <li><a href='#tabs-2'><img src="" alt="">Online FIR</a></a></li>
+                  <li><a href='#tabs-3'><img src="" alt="">Fast Investigation</a></a></li>
                  
-                  <div class="main-rounded-button"><a href="#">View All Schedules</a></div>
+                  <div class="main-rounded-button"><a href="#">Raise Voice Against Crime</a></div>
                 </ul>
               </div>
               <div class="col-lg-8">
@@ -414,7 +440,7 @@ https://templatemo.com/tm-548-training-studio
                 <div class="col-lg-6 col-md-6 col-xs-12">
                   
                     <div class="contact-form">
-                       <center><h2 style="color:white;margin-bottom:10px;">Feedback/Query</h2></center>
+                       <center><h2 style="color:white;margin-bottom:10px;">Query</h2></center>
                         <form id="contact" action="contactscript.php" method="post">
                           <div class="row">
                             <div class="col-md-6 col-sm-12">
