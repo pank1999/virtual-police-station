@@ -99,7 +99,7 @@ https://templatemo.com/tm-548-training-studio
                             <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
                             <li class="scroll-to-section"><a href="#features">About</a></li>
                             <li class="scroll-to-section"><a href="#our-classes">Classes</a></li>
-                          <!--  <li class="scroll-to-section"><a href="#schedule">Schedules</a></li>
+                          <!--  <li class="scroll-to-section"><a href="#schedule"></a></li>
                             -->
                             <li class="scroll-to-section"><a href="#contact-us">Contact</a></li> 
                             <?php 
@@ -291,7 +291,7 @@ https://templatemo.com/tm-548-training-studio
                         <h2>Don’t <em>think</em>, begin <em>today</em>!</h2>
                         <p>My heroes are those who risk their lives every day to protect our world and make it a better place. </p>
                         <div class="main-button scroll-to-section">
-                            <a href="#our-classes">Become a member</a>
+                            <a href="women-saftey.php">Women Empowerment</a>
                         </div>
                     </div>
                 </div>
